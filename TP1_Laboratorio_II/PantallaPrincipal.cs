@@ -22,5 +22,20 @@ namespace TP1_Laboratorio_II
     {
       this.Close();
     }
+
+    private void PantallaPrincipal_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void PantallaPrincipal_Load_1(object sender, EventArgs e)
+    {
+
+    }
+
+    private void acercaDelProductoToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
+    }
   }
 }
