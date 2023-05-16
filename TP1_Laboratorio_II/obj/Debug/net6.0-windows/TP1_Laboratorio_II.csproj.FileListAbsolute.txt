@@ -31,3 +31,7 @@ C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\ref\TP1_
 C:\Users\alida\source\repos\TP1_Laboratorio_II\bin\Debug\net6.0-windows\FireSharp.dll
 C:\Users\alida\source\repos\TP1_Laboratorio_II\bin\Debug\net6.0-windows\FireSharp.Serialization.JsonNet.dll
 C:\Users\alida\source\repos\TP1_Laboratorio_II\bin\Debug\net6.0-windows\RestSharp.dll
+C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.AboutIt.resources
+C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.Contacto.resources
+C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.Productos.resources
+C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.Material.resources

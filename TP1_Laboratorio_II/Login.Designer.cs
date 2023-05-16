@@ -1,4 +1,4 @@
-﻿namespace TP1_Laboratorio_II
+namespace TP1_Laboratorio_II
 {
   partial class Login
   {
@@ -90,7 +90,7 @@
             this.Controls.Add(this.textBoxContraseña);
             this.Controls.Add(this.textBoxUsuario);
             this.Name = "Login";
-            this.Text = "Login";
+            this.Text = "Blue CRM - Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

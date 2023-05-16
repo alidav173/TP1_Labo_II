@@ -36,15 +36,11 @@ namespace TP1_Laboratorio_II
     {
       string email = textBoxUsuario.Text;
       string contraseña = textBoxContraseña.Text;
-      string mensaje;
-      mensaje = ValidadorUsuarios.ValidadorUsuario(email, contraseña);
 
-      if (mensaje == "usuario ok")
+      if (Validador.esEmailValido(email) == true & Validador.esContraseñaValida(contraseña) == true)
       {
         Usuario usuarioNuevo = new Usuario(email, contraseña);
       }
-      
-      MessageBox.Show(mensaje);
       this.Hide();
       PantallaPrincipal pP = new PantallaPrincipal();
       pP.Show();
@@ -56,7 +52,7 @@ namespace TP1_Laboratorio_II
 
       if (client is not null)
       {
-        MessageBox.Show("Connection is established");
+        MessageBox.Show("Conexión establecida");
       }
    
     }

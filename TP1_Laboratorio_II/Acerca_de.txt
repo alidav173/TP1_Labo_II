@@ -1,0 +1,15 @@
+
+Este software esta diseñado para brindarle una experiencia de trabajo rápida y fácil,
+integrando varios modulos de acuerdo a sus necesidades, no importando si es una empresa de pequeño o gran porte.
+Blue CRM, esta dividido en los siguientes módulos:
+
+- Presupuestos
+- Clientes
+- Proveedores
+- Inventario de materias primas y productos terminados
+- Productos
+
+Para una mayor descripción y soporte, se puede comunicar mediante atención telefónica o por email,
+en nuestra sección de contacto.
+
+Todos los derechos reservados. Blue CRM 2023(c)
