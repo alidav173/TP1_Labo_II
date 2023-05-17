@@ -1,3 +1,4 @@
+using Controlador;
 using Data;
 using FireSharp.Config;
 using FireSharp.Interfaces;
@@ -17,16 +18,18 @@ namespace TP1_Laboratorio_II
 {
   public partial class Registro : Form
   {
-    IFirebaseConfig config = new FirebaseConfig
+   /* IFirebaseConfig config = new FirebaseConfig
     {
       AuthSecret = "Ftl3sYMwIdMqDoMLCwOKFGOrpK7bn1RUn2QGzh7b",
       BasePath = "https://pruebaapp-39ea7-default-rtdb.firebaseio.com/"
     };
 
-    IFirebaseClient client;
+    IFirebaseClient client;*/
     public Registro()
     {
+    
       InitializeComponent();
+      
     }
 
     private void label1_Click(object sender, EventArgs e)
@@ -62,12 +65,12 @@ namespace TP1_Laboratorio_II
     private void Registro_Load(object sender, EventArgs e)
     {
       //cambiar por try catch
-      client = new FireSharp.FirebaseClient(config);
+      /*client = new FireSharp.FirebaseClient(config);
 
       if (client is not null)
       {
         MessageBox.Show("Conexión establecida");
-      }
+      }*/
       foreach (var tipos in Enum.GetValues(typeof(Usuario.TiposUsuario)))
       {
         listBox_Usuario.Items.Add(tipos);
@@ -84,15 +87,18 @@ namespace TP1_Laboratorio_II
         int.TryParse(textBox3.Text, out dni);
         string email = textBox4.Text;
         string contraseña = textBox5.Text;
-        string tipoUsuario = listBox_Usuario.SelectedItem.ToString();
-        if (Validador.esEmailValido(email) == true & Validador.esContraseñaValida(contraseña) == true & Validador.esCadenaValida(nombre) == true & Validador.esCadenaValida(apellido) == true)
+        string rContraseña = textBox6.Text;
+        string ?tipoUsuario = listBox_Usuario.SelectedItem.ToString();
+        string mensajeControlador = ControladorRegistro.ValidarDatosUsuario(email, contraseña, nombre, apellido);
+        if (mensajeControlador == "datos validos" & contraseña == rContraseña)
         {
-            var usuarioNuevo = new Usuario(email, contraseña, nombre, apellido);
-          if (Validador.esDniValido(dni))
+           var usuarioNuevo = new Usuario(email, contraseña, nombre, apellido);
+          if (ControladorRegistro.ValidarDni(dni))
           {
             usuarioNuevo.Dni = dni;
           }
             usuarioNuevo.TipoUsuario = tipoUsuario;
+            var client = ConexionDatos.ConectarBD();
             SetResponse response = await client.SetTaskAsync("Usuarios/" + usuarioNuevo.Id, usuarioNuevo);
           
           //primer parametro es el nombre de la coleccion
@@ -104,7 +110,7 @@ namespace TP1_Laboratorio_II
         }
         else
         {
-          MessageBox.Show("Revise los datos del usuario");
+          MessageBox.Show(mensajeControlador);
         }
 
       }
@@ -120,7 +126,7 @@ namespace TP1_Laboratorio_II
 
     }
 
-    private bool validarDatosUsuario(string email, string contraseña, string nombre, string apellido)
+   /* private bool validarDatosUsuario(string email, string contraseña, string nombre, string apellido)
     {
       bool flag = false;
 
@@ -132,11 +138,16 @@ namespace TP1_Laboratorio_II
         }
       }
       return flag;
-    }
+    }*/
 
     private void btn_Cancelar_Click(object sender, EventArgs e)
     {
       this.Close();
+    }
+
+    private void textBox6_TextChanged(object sender, EventArgs e)
+    {
+
     }
   }
 }

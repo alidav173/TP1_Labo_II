@@ -19,8 +19,6 @@ C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Labo
 C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.Registro.resources
 C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.csproj.GenerateResource.cache
 C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.AssemblyInfoInputs.cache
-C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.AssemblyInfo.cs
 C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.csproj.CoreCompileInputs.cache
 C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.csproj.CopyComplete
 C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.dll
