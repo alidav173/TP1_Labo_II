@@ -200,6 +200,10 @@
             "FirebaseDatabase.net": {
               "target": "Package",
               "version": "[4.2.0, )"
+            },
+            "Google.Cloud.Firestore": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             }
           },
           "imports": [

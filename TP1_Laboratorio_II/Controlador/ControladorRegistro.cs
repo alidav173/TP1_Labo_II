@@ -1,11 +1,15 @@
 using Data;
+using FireSharp.Response;
+using Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Reflection.Metadata;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using static Modelos.Usuario;
 
 namespace Controlador
 {
@@ -64,6 +68,39 @@ namespace Controlador
     public static bool ValidarDni(int dni)
     {
       return Validador.esDniValido(dni);
+
+    }
+
+    public static string ConectarDB(string email, string contraseña,string rContraseña, string nombre, string apellido, string tipo, int dni)
+    {
+      string mensajeSalida = string.Empty;
+      try
+      {
+        string mensajeControlador = ValidarDatosUsuario(email, contraseña, nombre, apellido);
+        if (mensajeControlador == "datos validos" & contraseña == rContraseña)
+        {
+          var usuarioNuevo = new Usuario(email, contraseña, nombre, apellido);
+          if (ValidarDni(dni))
+          {
+            usuarioNuevo.Dni = dni;
+          }
+          usuarioNuevo.TipoUsuario = tipo;
+          var client = ConexionDatos.ConectarBD();
+          SetResponse response =  client.Set("Usuarios/" + usuarioNuevo.Id, usuarioNuevo);
+          mensajeSalida = "Se creó el Usuario con ID: " + usuarioNuevo.Id;
+        }
+        else
+        {
+          mensajeSalida = mensajeControlador;
+        }
+
+      }
+      catch (Exception ex)
+      {
+
+      }
+
+      return mensajeSalida;
 
     }
 

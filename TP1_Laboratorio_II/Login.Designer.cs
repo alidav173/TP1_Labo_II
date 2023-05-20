@@ -69,6 +69,7 @@ namespace TP1_Laboratorio_II
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(121, 23);
             this.textBoxContraseña.TabIndex = 6;
+            this.textBoxContraseña.UseSystemPasswordChar = true;
             this.textBoxContraseña.TextChanged += new System.EventHandler(this.textBoxContraseña_TextChanged);
             // 
             // textBoxUsuario

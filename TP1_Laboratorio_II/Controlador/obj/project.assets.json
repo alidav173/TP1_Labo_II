@@ -263,6 +263,22 @@
         "runtime": {
           "bin/placeholder/Data.dll": {}
         }
+      },
+      "Modelos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Data": "1.0.0",
+          "FireSharp.Serialization.JsonNet": "1.1.0",
+          "FirebaseAuthentication.net": "4.0.2",
+          "FirebaseDatabase.net": "4.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Modelos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modelos.dll": {}
+        }
       }
     }
   },
@@ -1010,13 +1026,19 @@
       "type": "project",
       "path": "../../Data/Data.csproj",
       "msbuildProject": "../../Data/Data.csproj"
+    },
+    "Modelos/1.0.0": {
+      "type": "project",
+      "path": "../../Modelos/Modelos.csproj",
+      "msbuildProject": "../../Modelos/Modelos.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Data >= 1.0.0",
       "FireSharp.Serialization.JsonNet >= 1.1.0",
-      "FirebaseDatabase.net >= 4.2.0"
+      "FirebaseDatabase.net >= 4.2.0",
+      "Modelos >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1048,6 +1070,9 @@
           "projectReferences": {
             "C:\\Users\\alida\\source\\repos\\Data\\Data.csproj": {
               "projectPath": "C:\\Users\\alida\\source\\repos\\Data\\Data.csproj"
+            },
+            "C:\\Users\\alida\\source\\repos\\Modelos\\Modelos.csproj": {
+              "projectPath": "C:\\Users\\alida\\source\\repos\\Modelos\\Modelos.csproj"
             }
           }
         }

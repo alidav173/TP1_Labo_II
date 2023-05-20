@@ -3,18 +3,17 @@ using Data;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using Google.Cloud.Firestore;
+using Newtonsoft.Json;
+using System.Text.Json.Nodes;
+using System.Reflection.Metadata;
+using Controlador;
+using System.Windows.Forms;
 
 namespace TP1_Laboratorio_II
 {
   public partial class Login : Form
   {
-    IFirebaseConfig config = new FirebaseConfig
-    {
-      AuthSecret = "Ftl3sYMwIdMqDoMLCwOKFGOrpK7bn1RUn2QGzh7b",
-      BasePath = "https://pruebaapp-39ea7-default-rtdb.firebaseio.com/"
-    };
-
-    IFirebaseClient client;
 
     public Login()
     {
@@ -34,27 +33,23 @@ namespace TP1_Laboratorio_II
 
     private void boton_Login_Click(object sender, EventArgs e)
     {
-      string email = textBoxUsuario.Text;
-      string contraseña = textBoxContraseña.Text;
+ 
+        string email = textBoxUsuario.Text;
+        string contraseña = textBoxContraseña.Text;
+        string mensaje = ControladorLogin.ConectarBd(email, contraseña);
+        MessageBox.Show(mensaje);
+        if (mensaje == "¡Bienvenido!")
+        {
+        this.Hide();
+        PantallaPrincipal pP = new PantallaPrincipal();
+        pP.Show();
 
-      if (Validador.esEmailValido(email) == true & Validador.esContraseñaValida(contraseña) == true)
-      {
-        Usuario usuarioNuevo = new Usuario(email, contraseña);
-      }
-      this.Hide();
-      PantallaPrincipal pP = new PantallaPrincipal();
-      pP.Show();
+       }
     }
 
     private void Login_Load(object sender, EventArgs e)
     {
-      client = new FireSharp.FirebaseClient(config);
 
-      if (client is not null)
-      {
-        MessageBox.Show("Conexión establecida");
-      }
-   
     }
   }
 }
