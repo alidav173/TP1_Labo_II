@@ -53,3 +53,5 @@ C:\Users\alida\source\repos\TP1_Laboratorio_II\bin\Debug\net6.0-windows\Microsof
 C:\Users\alida\source\repos\TP1_Laboratorio_II\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\alida\source\repos\TP1_Laboratorio_II\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\alida\source\repos\TP1_Laboratorio_II\bin\Debug\net6.0-windows\System.Linq.Async.dll
+C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.ProductosFab.resources
+C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.BuscarProducto.resources

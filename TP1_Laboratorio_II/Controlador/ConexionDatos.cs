@@ -11,7 +11,12 @@ namespace Controlador
 {
   internal class ConexionDatos
   {
-
+    /// <summary>
+    /// Conecta a la base de datos firestore 
+    /// </summary>
+    /// <returns>
+    ///Retorna un cliente de la Base de datos firestore
+    /// </returns>
     public static FireSharp.FirebaseClient ConectarBD()
     {
       IFirebaseConfig config = new FirebaseConfig

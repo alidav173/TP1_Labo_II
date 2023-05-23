@@ -42,6 +42,8 @@ namespace TP1_Laboratorio_II
             this.mostrarPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productoReventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productoFabricacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -186,16 +188,34 @@ namespace TP1_Laboratorio_II
             // 
             // nuevoProductoToolStripMenuItem
             // 
+            this.nuevoProductoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productoReventaToolStripMenuItem,
+            this.productoFabricacionToolStripMenuItem});
             this.nuevoProductoToolStripMenuItem.Name = "nuevoProductoToolStripMenuItem";
             this.nuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.nuevoProductoToolStripMenuItem.Text = "Nuevo Producto";
             this.nuevoProductoToolStripMenuItem.Click += new System.EventHandler(this.nuevoProductoToolStripMenuItem_Click);
+            // 
+            // productoReventaToolStripMenuItem
+            // 
+            this.productoReventaToolStripMenuItem.Name = "productoReventaToolStripMenuItem";
+            this.productoReventaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.productoReventaToolStripMenuItem.Text = "Producto Reventa";
+            this.productoReventaToolStripMenuItem.Click += new System.EventHandler(this.productoReventaToolStripMenuItem_Click);
+            // 
+            // productoFabricacionToolStripMenuItem
+            // 
+            this.productoFabricacionToolStripMenuItem.Name = "productoFabricacionToolStripMenuItem";
+            this.productoFabricacionToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.productoFabricacionToolStripMenuItem.Text = "Producto Fabricacion";
+            this.productoFabricacionToolStripMenuItem.Click += new System.EventHandler(this.productoFabricacionToolStripMenuItem_Click);
             // 
             // buscarProductoToolStripMenuItem
             // 
             this.buscarProductoToolStripMenuItem.Name = "buscarProductoToolStripMenuItem";
             this.buscarProductoToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.buscarProductoToolStripMenuItem.Text = "Buscar Producto";
+            this.buscarProductoToolStripMenuItem.Click += new System.EventHandler(this.buscarProductoToolStripMenuItem_Click);
             // 
             // editarProductoToolStripMenuItem
             // 
@@ -229,26 +249,26 @@ namespace TP1_Laboratorio_II
             // nuevoMaterialToolStripMenuItem
             // 
             this.nuevoMaterialToolStripMenuItem.Name = "nuevoMaterialToolStripMenuItem";
-            this.nuevoMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoMaterialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.nuevoMaterialToolStripMenuItem.Text = "Nuevo Material";
             this.nuevoMaterialToolStripMenuItem.Click += new System.EventHandler(this.nuevoMaterialToolStripMenuItem_Click);
             // 
             // buscarMaterialToolStripMenuItem
             // 
             this.buscarMaterialToolStripMenuItem.Name = "buscarMaterialToolStripMenuItem";
-            this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.buscarMaterialToolStripMenuItem.Text = "Buscar Material";
             // 
             // editarMaterialToolStripMenuItem
             // 
             this.editarMaterialToolStripMenuItem.Name = "editarMaterialToolStripMenuItem";
-            this.editarMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarMaterialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.editarMaterialToolStripMenuItem.Text = "Editar Material";
             // 
             // eliminarMaterialToolStripMenuItem
             // 
             this.eliminarMaterialToolStripMenuItem.Name = "eliminarMaterialToolStripMenuItem";
-            this.eliminarMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarMaterialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.eliminarMaterialToolStripMenuItem.Text = "Eliminar Material";
             // 
             // inventarioToolStripMenuItem
@@ -470,5 +490,7 @@ namespace TP1_Laboratorio_II
     private ToolStripMenuItem buscarPorIDToolStripMenuItem1;
     private ToolStripMenuItem buscarPorCUITToolStripMenuItem1;
     private ToolStripMenuItem buscarPorRazonSocialToolStripMenuItem1;
+    private ToolStripMenuItem productoReventaToolStripMenuItem;
+    private ToolStripMenuItem productoFabricacionToolStripMenuItem;
   }
 }

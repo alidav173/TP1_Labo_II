@@ -34,8 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -104,35 +102,16 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Descripción";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(94, 165);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(130, 49);
-            this.listBox1.TabIndex = 7;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 169);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(30, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Tipo";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(265, 128);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(61, 15);
+            this.label5.Size = new System.Drawing.Size(136, 15);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Proveedor";
+            this.label5.Text = "Porcentaje Ganancia (%)";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -140,44 +119,47 @@
             this.label6.Location = new System.Drawing.Point(265, 84);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(92, 15);
+            this.label6.Size = new System.Drawing.Size(109, 15);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Precio Producto";
+            this.label6.Text = "Precio Producto ($)";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(265, 41);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 15);
+            this.label7.Size = new System.Drawing.Size(107, 15);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Costo Producto";
+            this.label7.Text = "Costo Producto ($)";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBox4
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(393, 120);
+            this.textBox4.Location = new System.Drawing.Point(407, 128);
             this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Proveedor";
+            this.textBox4.PlaceholderText = "Porcentaje Ganancia";
             this.textBox4.Size = new System.Drawing.Size(103, 23);
             this.textBox4.TabIndex = 11;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(393, 76);
+            this.textBox5.Location = new System.Drawing.Point(407, 84);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(103, 23);
             this.textBox5.TabIndex = 10;
             this.textBox5.Text = "0";
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(393, 33);
+            this.textBox6.Location = new System.Drawing.Point(407, 41);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(103, 23);
             this.textBox6.TabIndex = 9;
             this.textBox6.Text = "0";
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button1
             // 
@@ -212,8 +194,6 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -221,7 +201,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Productos";
-            this.Text = "Blue CRM - Producto";
+            this.Text = "Blue CRM - Producto Reventa";
             this.Load += new System.EventHandler(this.Producto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,8 +216,6 @@
     private Label label1;
     private Label label2;
     private Label label3;
-    private ListBox listBox1;
-    private Label label4;
     private Label label5;
     private Label label6;
     private Label label7;

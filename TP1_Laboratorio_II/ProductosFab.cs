@@ -1,3 +1,4 @@
+using Controlador;
 using Modelos.Fabricacion;
 using System;
 using System.Collections.Generic;
@@ -8,34 +9,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Data;
-using Firebase.Auth.Requests;
-using Controlador;
 
 namespace TP1_Laboratorio_II
 {
-  public partial class Productos : Form
+  public partial class ProductosFab : Form
   {
-    public Productos()
+    public ProductosFab()
     {
       InitializeComponent();
-
     }
 
-    private void label2_Click(object sender, EventArgs e)
+    private void textBox1_TextChanged(object sender, EventArgs e)
     {
 
     }
 
-    private void Producto_Load(object sender, EventArgs e)
+    private void button3_Click(object sender, EventArgs e)
     {
-      /*foreach (var tipos in Enum.GetValues(typeof(Modelos.Fabricacion.Producto.tipoProducto)))
-      {
-        listBox1.Items.Add(tipos);
-      }*/
+      this.Close();
     }
 
     private void button1_Click(object sender, EventArgs e)
+    {
+      Material nMaterial = new Material();
+      nMaterial.Show();
+    }
+
+    private void button2_Click(object sender, EventArgs e)
     {
       try
       {
@@ -44,29 +44,18 @@ namespace TP1_Laboratorio_II
         //string tipo = listBox1.SelectedItem.ToString();
         string costoProducto = textBox6.Text;
         string porcentajeGanancia = textBox4.Text;
-        string mensajeControlador = ControladorProducto.ConectarDB(nombreProducto, descripcion, costoProducto, porcentajeGanancia, Producto.tipoProducto.Reventa.ToString());
+        string mensajeControlador = ControladorProducto.ConectarDB(nombreProducto, descripcion, costoProducto, porcentajeGanancia,Producto.tipoProducto.Fabricacion.ToString());
         MessageBox.Show(mensajeControlador);
         if (mensajeControlador.Contains("Se creó el Producto"))
-          {
+        {
           this.Close();
         }
-       
+
       }
       catch (Exception ex)
       {
         MessageBox.Show("Ha ocurrido un error");
       }
-
-    }
-
-    private void button2_Click(object sender, EventArgs e)
-    {
-      this.Close();
-    }
-
-    private void textBox1_TextChanged(object sender, EventArgs e)
-    {
-
     }
 
     private void textBox2_TextChanged(object sender, EventArgs e)
@@ -79,13 +68,7 @@ namespace TP1_Laboratorio_II
 
     }
 
-    private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-  
-     
-    }
-
-    private void label5_Click(object sender, EventArgs e)
+    private void textBox6_TextChanged(object sender, EventArgs e)
     {
 
     }
@@ -96,16 +79,6 @@ namespace TP1_Laboratorio_II
     }
 
     private void textBox5_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    private void label7_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void textBox6_TextChanged(object sender, EventArgs e)
     {
 
     }

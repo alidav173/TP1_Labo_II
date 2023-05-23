@@ -6,6 +6,14 @@ namespace Controlador
 {
   public class ControladorLogin
   {
+    /// <summary>
+    /// Valida los campos de un usuario, pasados por parametro
+    /// </summary>
+    /// <param name="email"></param>
+    /// <param name="contraseña"></param>
+    /// <returns>
+    ///Retorna una cadena de texto con el mensaje "datos validos" si todo ok, sino devulve un mensaje con el error.
+    /// </returns>
     public static string ValidarDatosUsuario(string email, string contraseña)
     { 
       string mensaje = string.Empty;
@@ -47,6 +55,14 @@ namespace Controlador
       return mensaje;
     }
 
+    /// <summary>
+    /// Busca y verifica si los datos ingresados en los parametros, se encuentran en la BD
+    /// </summary>
+    /// <param name="email"></param>
+    /// <param name="contraseña"></param>
+    /// <returns>
+    ///REtorna una cadena de texto con el mensaje ¡Bienvenido!", sino una cadena con el error.
+    /// </returns>
     public static string ConectarBd(string email, string contraseña)
     {
       
@@ -56,7 +72,7 @@ namespace Controlador
         string mensajeControlador = ValidarDatosUsuario(email, contraseña);
         if (mensajeControlador == "datos validos")
         {
-          for (int i = 2; i < 10; i++) //corregir
+          for (int i = 1; i < 20; i++) 
           {
             FirebaseResponse response = client.Get("Usuarios/" + i);
             Usuario usuarioBuscado = response.ResultAs<Usuario>();

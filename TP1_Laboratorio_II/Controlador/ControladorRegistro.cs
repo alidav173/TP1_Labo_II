@@ -15,7 +15,16 @@ namespace Controlador
 {
   internal class ControladorRegistro
   {
-
+    /// <summary>
+    /// Valida los campos de un usuario pasados por parametros
+    /// </summary>
+    /// <param name="email"></param>
+    /// <param name="contraseña"></param>
+    /// <param name="nombre"></param>
+    /// <param name="apellido"></param>
+    /// <returns>
+    ///Retorna una cadena de texto con el mensaje "datos validos", sino una cadena con el error.
+    /// </returns>
     public static string ValidarDatosUsuario(string email, string contraseña, string nombre, string apellido)
     {
       string mensaje = string.Empty;
@@ -65,12 +74,32 @@ namespace Controlador
         return mensaje;
     }
 
+
+    /// <summary>
+    /// Valida si un numero de dni es valido
+    /// </summary>
+    /// <param name="dni"></param>
+    /// <returns>
+    ///Retorna true si es valido el dni, sino retorna false
+    /// </returns>
     public static bool ValidarDni(int dni)
     {
       return Validador.esDniValido(dni);
 
     }
-
+    /// <summary>
+    /// Verifica y conecta a la BD si los datos pasados por parametros son correctos
+    /// </summary>
+    /// <param name="email"></param>
+    /// <param name="contraseña"></param>
+    /// <param name="rContraseña"></param>
+    /// <param name="nombre"></param>
+    /// <param name="apellido"></param>
+    /// <param name="tipo"></param>
+    /// <param name="dni"></param>
+    /// <returns>
+    ///Retorna una cadena de texto con el mensaje "Se creó el Usuario con ID:", sino una cadena con el error.
+    /// </returns>
     public static string ConectarDB(string email, string contraseña,string rContraseña, string nombre, string apellido, string tipo, int dni)
     {
       string mensajeSalida = string.Empty;

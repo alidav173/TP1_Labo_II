@@ -69,14 +69,30 @@ namespace TP1_Laboratorio_II
 
     private void nuevoProductoToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Productos prdto = new Productos();
-      prdto.Show();
     }
 
     private void nuevoMaterialToolStripMenuItem_Click(object sender, EventArgs e)
     {
       Material nuevoMaterial = new Material();
       nuevoMaterial.Show();
+    }
+
+    private void productoReventaToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      Productos prdto = new Productos();
+      prdto.Show();
+    }
+
+    private void productoFabricacionToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      ProductosFab pdFb = new ProductosFab();
+      pdFb.Show();
+    }
+
+    private void buscarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      BuscarProducto bp = new BuscarProducto();
+      bp.Show();
     }
   }
 }
