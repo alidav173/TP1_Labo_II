@@ -39,30 +39,40 @@ namespace TP1_Laboratorio_II
       try
       {
         string Id = textBox1.Text;
-        if (!string.IsNullOrEmpty(Id))
+        int Idint;
+        if (!string.IsNullOrEmpty(Id) & int.TryParse(Id, out Idint) == true)
         {
-          Producto productoBuscado;
-           string mensaje =  ControladorProducto.BuscarProductoPorID(Id, out productoBuscado);
-          if (mensaje ==  "Producto encontrado")
+          Producto productoBuscado = ControladorProducto.BuscarProductoPorID(Id);
+          if (productoBuscado != null)
           {
+            MessageBox.Show(productoBuscado.MostrarDatos());
             textBox2.Text = productoBuscado.NombreProducto;
             textBox3.Text = productoBuscado.CostoProducto.ToString();
             textBox4.Text = productoBuscado.DescripcionProducto;
             textBox5.Text = productoBuscado.PrecioProducto.ToString();
+            this.Close();
           }
           else
           {
-            MessageBox.Show(mensaje);
+            MessageBox.Show("No se ha encontrado el producto");
           }
         }
-        else
+        else if (string.IsNullOrEmpty(Id))
         {
-          throw new CadenaVacia();
+          throw new CadenaVaciaException();
+        }
+        else if (int.TryParse(Id,out Idint) == false)
+        {
+          throw new NoEsUnEnteroException();
         }
       }
-      catch (CadenaVacia cv)
+      catch (CadenaVaciaException cv)
       {
         MessageBox.Show("Ingrese un ID de producto");
+      }
+      catch(NoEsUnEnteroException ex)
+      {
+        MessageBox.Show("No es un numero entero");
       }
 
     }
@@ -94,28 +104,30 @@ namespace TP1_Laboratorio_II
         string nombre = textBox2.Text;
         if (!string.IsNullOrEmpty(nombre))
         {
-          Producto productoBuscado;
-          string mensaje = ControladorProducto.BuscarProductoPorNombre(nombre, out productoBuscado);
-          if (mensaje == "Producto encontrado")
+
+          Producto productoBuscado = ControladorProducto.BuscarProductoPorNombre(nombre);
+          if (productoBuscado != null)
           {
+            MessageBox.Show(productoBuscado.MostrarDatos());
             textBox1.Text = productoBuscado.IdProducto.ToString();
             textBox3.Text = productoBuscado.CostoProducto.ToString();
             textBox4.Text = productoBuscado.DescripcionProducto;
             textBox5.Text = productoBuscado.PrecioProducto.ToString();
+            this.Close();
           }
           else
           {
-            MessageBox.Show(mensaje);
+            MessageBox.Show("No se ha encontrado el producto");
           }
         }
         else
         {
-          throw new CadenaVacia();
+          throw new CadenaVaciaException();
         }
       }
-      catch (CadenaVacia cv)
+      catch (CadenaVaciaException cv)
       {
-        MessageBox.Show("Ingrese un ID de producto");
+        MessageBox.Show("Ingrese un nombre del producto");
       }
     }
   }

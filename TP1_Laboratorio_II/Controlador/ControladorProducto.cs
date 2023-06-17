@@ -2,6 +2,7 @@ using FireSharp.Response;
 using Modelos;
 using Modelos.Fabricacion;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,36 +35,36 @@ namespace Controlador
         }
         else if (string.IsNullOrEmpty(nombre) == true)
         {
-          throw new CadenaVacia();
+          throw new CadenaVaciaException();
         }
         else if (string.IsNullOrEmpty(descripcion) == true)
         {
-          throw new CadenaVacia();
+          throw new CadenaVaciaException();
         }
         else if (string.IsNullOrEmpty(costo) == true)
         {
-          throw new CadenaVacia();
+          throw new CadenaVaciaException();
         }
         else if (string.IsNullOrEmpty(porcentaje) == true)
         {
-          throw new CadenaVacia();
+          throw new CadenaVaciaException();
         }
         else if (float.TryParse(costo, out costoFloat) == false)
         {
-          throw new NoEsUnFlotante();
+          throw new NoEsUnFlotanteException();
         }
         else if (float.TryParse(porcentaje, out porcentajeFloat) == false)
         {
-          throw new NoEsUnFlotante();
+          throw new NoEsUnFlotanteException();
         }
 
       }
-      catch(CadenaVacia vacio)
+      catch(CadenaVaciaException vacio)
         {
         mensaje = "Ingrese un dato valido " + vacio.Message;
       }
 
-      catch (NoEsUnFlotante error)
+      catch (NoEsUnFlotanteException error)
       {
         mensaje = "Ingrese un valor valido " + error.Message;
       }
@@ -126,28 +127,28 @@ namespace Controlador
     }
 
     /// <summary>
-    /// Busca un producto por su nombre en la BD. Retorna una cadena de texto
+    /// Busca un producto por su nombre en la BD. Retorna un producto
     /// </summary>
     /// <param name="nombre"></param>
     /// <param name="producto"></param>
     /// <returns>
-    /// Retorna una cadena de texto con el mensaje "producto encontrado", sino devuelve una cadena con el error.
+    /// Retorna un producto, sino devuelve un producto nulo.
     /// </returns>
-    public static string BuscarProductoPorNombre(string nombre, out Producto producto)
+    public static Producto BuscarProductoPorNombre(string nombre)
     {
       string mensajeSalida = string.Empty;
-       producto = null;
+       Producto producto = null;
       try
       {
         var client = ConexionDatos.ConectarBD();
           for (int i = 1001; i <1100; i++)
           {
-            FirebaseResponse response = client.Get("Productos/" + i);
-            Producto productoBuscado = response.ResultAs<Producto>();
+           FirebaseResponse response =  client.Get("Productos/" +i);
+           Producto productoBuscado = response.ResultAs<Producto>();
 
-            if (productoBuscado.NombreProducto == nombre)
+          if (productoBuscado.NombreProducto == nombre)
             {
-            productoBuscado = producto;
+            producto = productoBuscado;
             mensajeSalida = "Producto Encontrado";
             break;
           }
@@ -156,29 +157,31 @@ namespace Controlador
       }
       catch (Exception cv)
       {
-        mensajeSalida = "Error";
+        mensajeSalida = "No se encontró el producto";
       }
 
-      return mensajeSalida;
+      return producto;
     }
     /// <summary>
-    /// Busca un producto en la BD por id. Retorna una cadena de texto
+    /// Busca un producto en la BD por id. Retorna un producto
     /// </summary>
     /// <param name="id"></param>
     /// <param name="productoBuscado"></param>
     /// <returns>
-    ///etorna una cadena de texto con el mensaje "producto encontrado", sino devuelve una cadena con el error.
+    ///Retorna un producto, sino devuelve un producto nulo.
     /// </returns>
-    public static string BuscarProductoPorID(string id, out Producto productoBuscado)
+    public static Producto BuscarProductoPorID(string id)
     {
-      productoBuscado = null;
+   
       string mensajeSalida = string.Empty;
+      Producto productoBuscado = null;
+      string mensaje;
       try
       {
         var client = ConexionDatos.ConectarBD();
         int idProducto;
         if (int.TryParse(id, out idProducto) == true)
-        {
+        { 
           for (int i = 1001; i < 1100; i++) 
           {
             FirebaseResponse response = client.Get("Productos/" + i);
@@ -187,26 +190,26 @@ namespace Controlador
             if (producto.IdProducto == idProducto)
             {
               productoBuscado = producto;
-              mensajeSalida = "Producto Encontrado";
+              mensaje = "Producto Encontrado";
               break;
             }
           }
         }
         else
         {
-          throw new NoEsUnEntero();
+          throw new NoEsUnEnteroException();
         }
       }
-      catch (NoEsUnEntero cv)
+      catch (NoEsUnEnteroException cv)
       {
-        mensajeSalida = "No es un numero";
+        mensaje = "No es un numero";
       }
       catch (Exception ex)
       {
-        mensajeSalida = "No se encontro el producto";
+        mensaje = "No se encontro el producto";
       }
 
-      return mensajeSalida;
+      return productoBuscado;
     }
   }
 }

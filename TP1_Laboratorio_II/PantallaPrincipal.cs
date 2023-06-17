@@ -46,13 +46,13 @@ namespace TP1_Laboratorio_II
 
     private void toolStripMenuItem4_Click(object sender, EventArgs e)
     {
-      Login lg = new Login();
+      LoginVista lg = new LoginVista();
       lg.Show();
     }
 
     private void toolStripMenuItem5_Click(object sender, EventArgs e)
     {
-      Registro rg = new Registro();
+      RegistroVista rg = new RegistroVista();
       rg.Show();
     }
 
@@ -73,19 +73,19 @@ namespace TP1_Laboratorio_II
 
     private void nuevoMaterialToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Material nuevoMaterial = new Material();
+      MateriaPrimaVista nuevoMaterial = new MateriaPrimaVista();
       nuevoMaterial.Show();
     }
 
     private void productoReventaToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Productos prdto = new Productos();
+      ProductoRevVista prdto = new ProductoRevVista();
       prdto.Show();
     }
 
     private void productoFabricacionToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      ProductosFab pdFb = new ProductosFab();
+      ProductosFabVista pdFb = new ProductosFabVista();
       pdFb.Show();
     }
 
@@ -93,6 +93,18 @@ namespace TP1_Laboratorio_II
     {
       BuscarProducto bp = new BuscarProducto();
       bp.Show();
+    }
+
+    private void nuevoPresupuestoToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      PresupuestoVista pV = new PresupuestoVista();
+      pV.Show();
+    }
+
+    private void listadoUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      Listado listadoUno = new Listado();
+      listadoUno.Show();
     }
   }
 }

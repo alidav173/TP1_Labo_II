@@ -73,6 +73,8 @@ namespace TP1_Laboratorio_II
             this.aboutItToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,7 +129,8 @@ namespace TP1_Laboratorio_II
             this.materialesToolStripMenuItem,
             this.inventarioToolStripMenuItem,
             this.clienteToolStripMenuItem,
-            this.proveedorToolStripMenuItem});
+            this.proveedorToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.modulosToolStripMenuItem.Name = "modulosToolStripMenuItem";
             this.modulosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.modulosToolStripMenuItem.Text = "Modulos";
@@ -149,6 +152,7 @@ namespace TP1_Laboratorio_II
             this.nuevoPresupuestoToolStripMenuItem.Name = "nuevoPresupuestoToolStripMenuItem";
             this.nuevoPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.nuevoPresupuestoToolStripMenuItem.Text = "Nuevo Presupuesto";
+            this.nuevoPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPresupuestoToolStripMenuItem_Click);
             // 
             // buscarPresupuestoToolStripMenuItem
             // 
@@ -415,6 +419,21 @@ namespace TP1_Laboratorio_II
             this.toolStripMenuItem8.Text = "Contacto";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadoUsuariosToolStripMenuItem});
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Text = "Listas";
+            // 
+            // listadoUsuariosToolStripMenuItem
+            // 
+            this.listadoUsuariosToolStripMenuItem.Name = "listadoUsuariosToolStripMenuItem";
+            this.listadoUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listadoUsuariosToolStripMenuItem.Text = "Listado Usuarios";
+            this.listadoUsuariosToolStripMenuItem.Click += new System.EventHandler(this.listadoUsuariosToolStripMenuItem_Click);
+            // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -492,5 +511,7 @@ namespace TP1_Laboratorio_II
     private ToolStripMenuItem buscarPorRazonSocialToolStripMenuItem1;
     private ToolStripMenuItem productoReventaToolStripMenuItem;
     private ToolStripMenuItem productoFabricacionToolStripMenuItem;
+    private ToolStripMenuItem usuariosToolStripMenuItem;
+    private ToolStripMenuItem listadoUsuariosToolStripMenuItem;
   }
 }

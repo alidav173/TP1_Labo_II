@@ -10,22 +10,31 @@
     <Compile Update="Contacto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Material.cs">
+    <Compile Update="Listado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ListadoProductosFab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MateriaPrimaVista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Login.cs">
+    <Compile Update="LoginVista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Productos.cs">
+    <Compile Update="PresupuestoVista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ProductosFab.cs">
+    <Compile Update="ProductoRevVista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Registro.cs">
+    <Compile Update="ProductosFabVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RegistroVista.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -25,30 +25,30 @@ namespace Controlador
         }
         else if (string.IsNullOrEmpty(email) == true)
         {
-          throw new CadenaVacia();
+          throw new CadenaVaciaException();
         }
         else if (string.IsNullOrEmpty(contraseña) == true)
         {
-          throw new CadenaVacia();
+          throw new CadenaVaciaException();
         }
         else if (!Validador.esEmailValido(email))
         {
-          throw new EmailInvalido();
+          throw new EmailInvalidoException();
         }
         else if (!Validador.esContraseñaValida(contraseña))
         {
-          throw new ContraseñaInvalida();
+          throw new ContraseñaInvalidaException();
         }
       }
-      catch (CadenaVacia vacio)
+      catch (CadenaVaciaException vacio)
       {
         mensaje = "Ingrese un dato valido " + vacio.Message;
       }
-      catch (EmailInvalido em)
+      catch (EmailInvalidoException em)
       {
         mensaje = "Ingrese un email valido " + em.Message;
       }
-      catch (ContraseñaInvalida ci)
+      catch (ContraseñaInvalidaException ci)
       {
         mensaje = "Ingrese una contraseña valida " + ci.Message;
       }
