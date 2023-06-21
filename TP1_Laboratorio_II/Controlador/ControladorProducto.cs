@@ -12,6 +12,7 @@ namespace Controlador
 {
   internal class ControladorProducto
   {
+
     /// <summary>
     /// Valida los datos ingresados por paramtros de un producto.
     /// </summary>
@@ -82,7 +83,7 @@ namespace Controlador
     /// <returns>
     ///Retorna una cadena de texto con el mensaje "Se creó el Producto con ID:", sino devuelve una cadena con el error.
     /// </returns>
-    public static string ConectarDB(string nombre, string descripcion, string costo, string porcentaje, string tipo)
+    public static string ConectarDB(string nombre, string descripcion, string costo, string porcentaje, string tipo, List<MateriaPrima> lista)
     {
       string mensajeSalida = string.Empty;
       float costoFloat;
@@ -103,8 +104,8 @@ namespace Controlador
               mensajeSalida = "Se creó el Producto con ID: " + nuevoProducto.IdProducto;
             }
             else{
-              List<MateriaPrima> lista = new List<MateriaPrima>();
               ProductoFabricacion nuevoProducto2 = new ProductoFabricacion(nombre, descripcion, costoFloat, lista);
+              nuevoProducto2.CalcularPrecioVenta(porcFloat);
               SetResponse response = client.Set("Productos/" + nuevoProducto2.IdProducto, nuevoProducto2);
               mensajeSalida = "Se creó el Producto con ID: " + nuevoProducto2.IdProducto;
             }  
@@ -116,13 +117,13 @@ namespace Controlador
           mensajeSalida = mensajeControlador;
         }
 
+        return mensajeSalida;
       }
       catch (Exception ex)
       {
-        mensajeSalida = "Error" + ex;
-      }
+        return mensajeSalida = "Error" + ex;
 
-      return mensajeSalida;
+      }
 
     }
 
@@ -172,7 +173,6 @@ namespace Controlador
     /// </returns>
     public static Producto BuscarProductoPorID(string id)
     {
-   
       string mensajeSalida = string.Empty;
       Producto productoBuscado = null;
       string mensaje;
@@ -211,5 +211,6 @@ namespace Controlador
 
       return productoBuscado;
     }
+
   }
 }

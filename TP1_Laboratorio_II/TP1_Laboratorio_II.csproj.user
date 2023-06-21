@@ -10,10 +10,19 @@
     <Compile Update="BuscarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ClienteVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Contacto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Listado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ListadoMateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ListadoProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ListadoProductosFab.cs">

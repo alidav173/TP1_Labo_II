@@ -16,6 +16,7 @@ namespace TP1_Laboratorio_II
   public partial class ProductosFabVista : Form
   {
     DataTable dt = new DataTable();
+    List<MateriaPrima> lista = new List<MateriaPrima>();
     public ProductosFabVista()
     {
       InitializeComponent();
@@ -31,13 +32,35 @@ namespace TP1_Laboratorio_II
       this.Close();
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private async void button1_Click(object sender, EventArgs e)
     {
-      MateriaPrimaVista nMaterial = new MateriaPrimaVista();
+      ListadoMateriaPrima nMaterial = new ListadoMateriaPrima();
       nMaterial.Show();
+      dt.Columns.Add("Id");
+      dt.Columns.Add("Nombre");
+      dt.Columns.Add("Descripción");
+      dt.Columns.Add("Precio");
+      dt.Columns.Add("Tipo Material");
+      dt.Columns.Add("Unidad de Medida");
+      dt.Columns.Add("Cantidad");
+
+      dataGridView1.DataSource = dt;
+      lista = nMaterial.lista;
+      foreach (MateriaPrima mp in lista)
+      {
+        DataRow row = dt.NewRow();
+        row["Id"] = mp.Id;
+        row["Nombre"] = mp.Nombre;
+        row["Descripción"] = mp.Descripcion;
+        row["Precio"] = mp.Precio;
+        row["Tipo Material"] = mp.TipoMaterial;
+        row["Unidad de Medida"] = mp.UnidadMedida;
+        row["Cantidad"] = mp.Cantidad;
+        dt.Rows.Add(row);
+      }
     }
 
-    private void button2_Click(object sender, EventArgs e)
+    private async void button2_Click(object sender, EventArgs e)
     {
       try
       {
@@ -46,7 +69,7 @@ namespace TP1_Laboratorio_II
         //string tipo = listBox1.SelectedItem.ToString();
         string costoProducto = textBox6.Text;
         string porcentajeGanancia = textBox4.Text;
-        string mensajeControlador = ControladorProducto.ConectarDB(nombreProducto, descripcion, costoProducto, porcentajeGanancia,Producto.tipoProducto.Fabricacion.ToString());
+        string mensajeControlador = ControladorProducto.ConectarDB(nombreProducto, descripcion, costoProducto, porcentajeGanancia,Producto.tipoProducto.Fabricacion.ToString(), lista);
         MessageBox.Show(mensajeControlador);
         if (mensajeControlador.Contains("Se creó el Producto"))
         {
@@ -87,34 +110,38 @@ namespace TP1_Laboratorio_II
 
     private async void ProductosFab_Load(object sender, EventArgs e)
     {
+      /*
       dt.Columns.Add("Id");
       dt.Columns.Add("Nombre");
       dt.Columns.Add("Descripción");
       dt.Columns.Add("Precio");
       dt.Columns.Add("Tipo Material");
       dt.Columns.Add("Unidad de Medida");
+      dt.Columns.Add("Cantidad");
 
       dataGridView1.DataSource = dt;
-      MateriaPrima mpNueva;
-      int Id = 1;
-      mpNueva = ControladorMaterial.BuscarMaterialPorID(ParserCSV.ConvertirIntAString(Id));
-      while (mpNueva != null)
+      ListadoMateriaPrima lmp = new ListadoMateriaPrima();
+      lista = lmp.lista;
+      foreach (MateriaPrima mp in lista)
       {
-          DataRow row = dt.NewRow();
-          row["Id"] = mpNueva.Id;
-          row["Nombre"] = mpNueva.Nombre;
-          row["Descripción"] = mpNueva.Descripcion;
-          row["Precio"] = mpNueva.Precio;
-          row["Tipo Material"] = mpNueva.TipoMaterial;
-          row["Unidad de Medida"] = mpNueva.UnidadMedida;
-          dt.Rows.Add(row);
-          Id++;
-
-        mpNueva = ControladorMaterial.BuscarMaterialPorID(ParserCSV.ConvertirIntAString(Id));
-      }
+        DataRow row = dt.NewRow();
+        row["Id"] = mp.Id;
+        row["Nombre"] = mp.Nombre;
+        row["Descripción"] = mp.Descripcion;
+        row["Precio"] = mp.Precio;
+        row["Tipo Material"] = mp.TipoMaterial;
+        row["Unidad de Medida"] = mp.UnidadMedida;
+        row["Cantidad"] = mp.Cantidad;
+        dt.Rows.Add(row);
+      }*/
     }
 
     private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    {
+
+    }
+
+    private void selectedRowsButton_Click(object sender, EventArgs e)
     {
 
     }

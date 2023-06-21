@@ -106,5 +106,16 @@ namespace TP1_Laboratorio_II
       Listado listadoUno = new Listado();
       listadoUno.Show();
     }
+
+    private void buscarPorNomnreToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void nuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      ClienteVista cv = new ClienteVista();
+      cv.Show();
+    }
   }
 }

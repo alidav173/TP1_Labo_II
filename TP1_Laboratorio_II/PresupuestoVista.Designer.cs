@@ -31,9 +31,9 @@
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblNombreCliente = new System.Windows.Forms.Label();
+            this.lblRazonSocial = new System.Windows.Forms.Label();
             this.txtBxNombreCliente = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbxCuit = new System.Windows.Forms.TextBox();
             this.lblCuit = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.txtBxSubtotal = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.btnAgregarProducto.TabIndex = 1;
             this.btnAgregarProducto.Text = "Agregar Producto";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // btnEliminarProducto
             // 
@@ -79,15 +80,16 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(364, 71);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // lblNombreCliente
+            // lblRazonSocial
             // 
-            this.lblNombreCliente.AutoSize = true;
-            this.lblNombreCliente.Location = new System.Drawing.Point(66, 22);
-            this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(91, 15);
-            this.lblNombreCliente.TabIndex = 4;
-            this.lblNombreCliente.Text = "Nombre Cliente";
+            this.lblRazonSocial.AutoSize = true;
+            this.lblRazonSocial.Location = new System.Drawing.Point(66, 22);
+            this.lblRazonSocial.Name = "lblRazonSocial";
+            this.lblRazonSocial.Size = new System.Drawing.Size(73, 15);
+            this.lblRazonSocial.TabIndex = 4;
+            this.lblRazonSocial.Text = "Razon Social";
             // 
             // txtBxNombreCliente
             // 
@@ -96,14 +98,15 @@
             this.txtBxNombreCliente.PlaceholderText = "Nombre Cliente";
             this.txtBxNombreCliente.Size = new System.Drawing.Size(161, 23);
             this.txtBxNombreCliente.TabIndex = 5;
+            this.txtBxNombreCliente.TextChanged += new System.EventHandler(this.txtBxNombreCliente_TextChanged);
             // 
-            // textBox1
+            // txtbxCuit
             // 
-            this.textBox1.Location = new System.Drawing.Point(257, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Nombre Cliente";
-            this.textBox1.Size = new System.Drawing.Size(161, 23);
-            this.textBox1.TabIndex = 7;
+            this.txtbxCuit.Location = new System.Drawing.Point(257, 52);
+            this.txtbxCuit.Name = "txtbxCuit";
+            this.txtbxCuit.PlaceholderText = "Nombre Cliente";
+            this.txtbxCuit.Size = new System.Drawing.Size(161, 23);
+            this.txtbxCuit.TabIndex = 7;
             // 
             // lblCuit
             // 
@@ -194,6 +197,7 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(265, 40);
             this.checkedListBox1.TabIndex = 16;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // lblImpuestos
             // 
@@ -222,6 +226,7 @@
             this.btnAgregarCliente.TabIndex = 19;
             this.btnAgregarCliente.Text = "Agregar Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
             // btnCancelar
             // 
@@ -231,6 +236,7 @@
             this.btnCancelar.TabIndex = 20;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblTipoCliente
             // 
@@ -249,6 +255,7 @@
             this.listBoxTipoCliente.Name = "listBoxTipoCliente";
             this.listBoxTipoCliente.Size = new System.Drawing.Size(141, 19);
             this.listBoxTipoCliente.TabIndex = 24;
+            this.listBoxTipoCliente.SelectedIndexChanged += new System.EventHandler(this.listBoxTipoCliente_SelectedIndexChanged);
             // 
             // PresupuestoVista
             // 
@@ -270,10 +277,10 @@
             this.Controls.Add(this.lblIVA);
             this.Controls.Add(this.txtBxSubtotal);
             this.Controls.Add(this.lblSubtotal);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbxCuit);
             this.Controls.Add(this.lblCuit);
             this.Controls.Add(this.txtBxNombreCliente);
-            this.Controls.Add(this.lblNombreCliente);
+            this.Controls.Add(this.lblRazonSocial);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEliminarProducto);
             this.Controls.Add(this.btnAgregarProducto);
@@ -292,9 +299,9 @@
     private Button btnAgregarProducto;
     private Button btnEliminarProducto;
     private DataGridView dataGridView1;
-    private Label lblNombreCliente;
+    private Label lblRazonSocial;
     private TextBox txtBxNombreCliente;
-    private TextBox textBox1;
+    private TextBox txtbxCuit;
     private Label lblCuit;
     private Label lblSubtotal;
     private TextBox txtBxSubtotal;

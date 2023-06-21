@@ -37,32 +37,34 @@ namespace TP1_Laboratorio_II
             this.presupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPorIDToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPorClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productoReventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productoFabricacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPorIdToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPorNomnreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarTodosLosProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPorIDToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPorNombreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventarioDeMaterialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventarioDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarMaterialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarDatosClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPorIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPorCUITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPorRazonSocialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarDatosProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,11 +72,31 @@ namespace TP1_Laboratorio_II
             this.buscarPorIDToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPorCUITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPorRazonSocialToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarACSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAJSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarACSVToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAJSONToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAPDFToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.presupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarACSVToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAJSONToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAPDFToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarACSVToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAJSONToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAPDFToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.materialesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarACSVToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAJSONToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarAPDFToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutItToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +105,7 @@ namespace TP1_Laboratorio_II
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2,
             this.modulosToolStripMenuItem,
+            this.informesToolStripMenuItem,
             this.aboutItToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -127,10 +150,8 @@ namespace TP1_Laboratorio_II
             this.presupuestoToolStripMenuItem,
             this.productoToolStripMenuItem,
             this.materialesToolStripMenuItem,
-            this.inventarioToolStripMenuItem,
             this.clienteToolStripMenuItem,
-            this.proveedorToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
+            this.proveedorToolStripMenuItem});
             this.modulosToolStripMenuItem.Name = "modulosToolStripMenuItem";
             this.modulosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.modulosToolStripMenuItem.Text = "Modulos";
@@ -141,7 +162,6 @@ namespace TP1_Laboratorio_II
             this.nuevoPresupuestoToolStripMenuItem,
             this.buscarPresupuestoToolStripMenuItem,
             this.editarPresupuestoToolStripMenuItem,
-            this.eliminarPresupuestoToolStripMenuItem,
             this.mostrarPresupuestosToolStripMenuItem});
             this.presupuestoToolStripMenuItem.Name = "presupuestoToolStripMenuItem";
             this.presupuestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
@@ -156,21 +176,30 @@ namespace TP1_Laboratorio_II
             // 
             // buscarPresupuestoToolStripMenuItem
             // 
+            this.buscarPresupuestoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buscarPorIDToolStripMenuItem4,
+            this.buscarPorClienteToolStripMenuItem});
             this.buscarPresupuestoToolStripMenuItem.Name = "buscarPresupuestoToolStripMenuItem";
             this.buscarPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.buscarPresupuestoToolStripMenuItem.Text = "Buscar Presupuesto";
+            // 
+            // buscarPorIDToolStripMenuItem4
+            // 
+            this.buscarPorIDToolStripMenuItem4.Name = "buscarPorIDToolStripMenuItem4";
+            this.buscarPorIDToolStripMenuItem4.Size = new System.Drawing.Size(170, 22);
+            this.buscarPorIDToolStripMenuItem4.Text = "Buscar por ID";
+            // 
+            // buscarPorClienteToolStripMenuItem
+            // 
+            this.buscarPorClienteToolStripMenuItem.Name = "buscarPorClienteToolStripMenuItem";
+            this.buscarPorClienteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.buscarPorClienteToolStripMenuItem.Text = "Buscar por Cliente";
             // 
             // editarPresupuestoToolStripMenuItem
             // 
             this.editarPresupuestoToolStripMenuItem.Name = "editarPresupuestoToolStripMenuItem";
             this.editarPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.editarPresupuestoToolStripMenuItem.Text = "Editar Presupuesto";
-            // 
-            // eliminarPresupuestoToolStripMenuItem
-            // 
-            this.eliminarPresupuestoToolStripMenuItem.Name = "eliminarPresupuestoToolStripMenuItem";
-            this.eliminarPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.eliminarPresupuestoToolStripMenuItem.Text = "Eliminar Presupuesto";
             // 
             // mostrarPresupuestosToolStripMenuItem
             // 
@@ -184,8 +213,7 @@ namespace TP1_Laboratorio_II
             this.nuevoProductoToolStripMenuItem,
             this.buscarProductoToolStripMenuItem,
             this.editarProductoToolStripMenuItem,
-            this.eliminarProductoToolStripMenuItem,
-            this.actualizarTodosLosProductosToolStripMenuItem});
+            this.mostrarProductosToolStripMenuItem});
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
             this.productoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productoToolStripMenuItem.Text = "Producto";
@@ -196,7 +224,7 @@ namespace TP1_Laboratorio_II
             this.productoReventaToolStripMenuItem,
             this.productoFabricacionToolStripMenuItem});
             this.nuevoProductoToolStripMenuItem.Name = "nuevoProductoToolStripMenuItem";
-            this.nuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.nuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.nuevoProductoToolStripMenuItem.Text = "Nuevo Producto";
             this.nuevoProductoToolStripMenuItem.Click += new System.EventHandler(this.nuevoProductoToolStripMenuItem_Click);
             // 
@@ -216,28 +244,38 @@ namespace TP1_Laboratorio_II
             // 
             // buscarProductoToolStripMenuItem
             // 
+            this.buscarProductoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buscarPorIdToolStripMenuItem3,
+            this.buscarPorNomnreToolStripMenuItem});
             this.buscarProductoToolStripMenuItem.Name = "buscarProductoToolStripMenuItem";
-            this.buscarProductoToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.buscarProductoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.buscarProductoToolStripMenuItem.Text = "Buscar Producto";
             this.buscarProductoToolStripMenuItem.Click += new System.EventHandler(this.buscarProductoToolStripMenuItem_Click);
+            // 
+            // buscarPorIdToolStripMenuItem3
+            // 
+            this.buscarPorIdToolStripMenuItem3.Name = "buscarPorIdToolStripMenuItem3";
+            this.buscarPorIdToolStripMenuItem3.Size = new System.Drawing.Size(177, 22);
+            this.buscarPorIdToolStripMenuItem3.Text = "Buscar por Id";
+            // 
+            // buscarPorNomnreToolStripMenuItem
+            // 
+            this.buscarPorNomnreToolStripMenuItem.Name = "buscarPorNomnreToolStripMenuItem";
+            this.buscarPorNomnreToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.buscarPorNomnreToolStripMenuItem.Text = "Buscar por Nombre";
+            this.buscarPorNomnreToolStripMenuItem.Click += new System.EventHandler(this.buscarPorNomnreToolStripMenuItem_Click);
             // 
             // editarProductoToolStripMenuItem
             // 
             this.editarProductoToolStripMenuItem.Name = "editarProductoToolStripMenuItem";
-            this.editarProductoToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.editarProductoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.editarProductoToolStripMenuItem.Text = "Editar Producto";
             // 
-            // eliminarProductoToolStripMenuItem
+            // mostrarProductosToolStripMenuItem
             // 
-            this.eliminarProductoToolStripMenuItem.Name = "eliminarProductoToolStripMenuItem";
-            this.eliminarProductoToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.eliminarProductoToolStripMenuItem.Text = "Eliminar Producto";
-            // 
-            // actualizarTodosLosProductosToolStripMenuItem
-            // 
-            this.actualizarTodosLosProductosToolStripMenuItem.Name = "actualizarTodosLosProductosToolStripMenuItem";
-            this.actualizarTodosLosProductosToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.actualizarTodosLosProductosToolStripMenuItem.Text = "Actualizar todos los productos";
+            this.mostrarProductosToolStripMenuItem.Name = "mostrarProductosToolStripMenuItem";
+            this.mostrarProductosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.mostrarProductosToolStripMenuItem.Text = "Mostrar Productos";
             // 
             // materialesToolStripMenuItem
             // 
@@ -245,7 +283,7 @@ namespace TP1_Laboratorio_II
             this.nuevoMaterialToolStripMenuItem,
             this.buscarMaterialToolStripMenuItem,
             this.editarMaterialToolStripMenuItem,
-            this.eliminarMaterialToolStripMenuItem});
+            this.mostrarMaterialesToolStripMenuItem});
             this.materialesToolStripMenuItem.Name = "materialesToolStripMenuItem";
             this.materialesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.materialesToolStripMenuItem.Text = "Materiales";
@@ -253,55 +291,50 @@ namespace TP1_Laboratorio_II
             // nuevoMaterialToolStripMenuItem
             // 
             this.nuevoMaterialToolStripMenuItem.Name = "nuevoMaterialToolStripMenuItem";
-            this.nuevoMaterialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.nuevoMaterialToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.nuevoMaterialToolStripMenuItem.Text = "Nuevo Material";
             this.nuevoMaterialToolStripMenuItem.Click += new System.EventHandler(this.nuevoMaterialToolStripMenuItem_Click);
             // 
             // buscarMaterialToolStripMenuItem
             // 
+            this.buscarMaterialToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buscarPorIDToolStripMenuItem2,
+            this.buscarPorNombreToolStripMenuItem});
             this.buscarMaterialToolStripMenuItem.Name = "buscarMaterialToolStripMenuItem";
-            this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.buscarMaterialToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.buscarMaterialToolStripMenuItem.Text = "Buscar Material";
+            // 
+            // buscarPorIDToolStripMenuItem2
+            // 
+            this.buscarPorIDToolStripMenuItem2.Name = "buscarPorIDToolStripMenuItem2";
+            this.buscarPorIDToolStripMenuItem2.Size = new System.Drawing.Size(175, 22);
+            this.buscarPorIDToolStripMenuItem2.Text = "Buscar por ID";
+            // 
+            // buscarPorNombreToolStripMenuItem
+            // 
+            this.buscarPorNombreToolStripMenuItem.Name = "buscarPorNombreToolStripMenuItem";
+            this.buscarPorNombreToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.buscarPorNombreToolStripMenuItem.Text = "Buscar por nombre";
             // 
             // editarMaterialToolStripMenuItem
             // 
             this.editarMaterialToolStripMenuItem.Name = "editarMaterialToolStripMenuItem";
-            this.editarMaterialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.editarMaterialToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.editarMaterialToolStripMenuItem.Text = "Editar Material";
             // 
-            // eliminarMaterialToolStripMenuItem
+            // mostrarMaterialesToolStripMenuItem
             // 
-            this.eliminarMaterialToolStripMenuItem.Name = "eliminarMaterialToolStripMenuItem";
-            this.eliminarMaterialToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.eliminarMaterialToolStripMenuItem.Text = "Eliminar Material";
-            // 
-            // inventarioToolStripMenuItem
-            // 
-            this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inventarioDeMaterialesToolStripMenuItem,
-            this.inventarioDeProductosToolStripMenuItem});
-            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.inventarioToolStripMenuItem.Text = "Inventario";
-            // 
-            // inventarioDeMaterialesToolStripMenuItem
-            // 
-            this.inventarioDeMaterialesToolStripMenuItem.Name = "inventarioDeMaterialesToolStripMenuItem";
-            this.inventarioDeMaterialesToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.inventarioDeMaterialesToolStripMenuItem.Text = "Inventario de Materiales";
-            // 
-            // inventarioDeProductosToolStripMenuItem
-            // 
-            this.inventarioDeProductosToolStripMenuItem.Name = "inventarioDeProductosToolStripMenuItem";
-            this.inventarioDeProductosToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.inventarioDeProductosToolStripMenuItem.Text = "Inventario de Productos";
+            this.mostrarMaterialesToolStripMenuItem.Name = "mostrarMaterialesToolStripMenuItem";
+            this.mostrarMaterialesToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.mostrarMaterialesToolStripMenuItem.Text = "Mostrar Materiales";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoClienteToolStripMenuItem,
-            this.actualizarDatosClienteToolStripMenuItem,
-            this.buscarClienteToolStripMenuItem});
+            this.buscarClienteToolStripMenuItem,
+            this.editarClienteToolStripMenuItem,
+            this.mostrarClientesToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
@@ -309,14 +342,9 @@ namespace TP1_Laboratorio_II
             // nuevoClienteToolStripMenuItem
             // 
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
-            // 
-            // actualizarDatosClienteToolStripMenuItem
-            // 
-            this.actualizarDatosClienteToolStripMenuItem.Name = "actualizarDatosClienteToolStripMenuItem";
-            this.actualizarDatosClienteToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.actualizarDatosClienteToolStripMenuItem.Text = "Actualizar datos Cliente";
+            this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
             // buscarClienteToolStripMenuItem
             // 
@@ -325,7 +353,7 @@ namespace TP1_Laboratorio_II
             this.buscarPorCUITToolStripMenuItem,
             this.buscarPorRazonSocialToolStripMenuItem});
             this.buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
-            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarClienteToolStripMenuItem.Text = "Buscar Cliente";
             // 
             // buscarPorIDToolStripMenuItem
@@ -346,12 +374,25 @@ namespace TP1_Laboratorio_II
             this.buscarPorRazonSocialToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.buscarPorRazonSocialToolStripMenuItem.Text = "Buscar por Razon Social";
             // 
+            // editarClienteToolStripMenuItem
+            // 
+            this.editarClienteToolStripMenuItem.Name = "editarClienteToolStripMenuItem";
+            this.editarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarClienteToolStripMenuItem.Text = "Editar Cliente";
+            // 
+            // mostrarClientesToolStripMenuItem
+            // 
+            this.mostrarClientesToolStripMenuItem.Name = "mostrarClientesToolStripMenuItem";
+            this.mostrarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mostrarClientesToolStripMenuItem.Text = "Mostrar Clientes";
+            // 
             // proveedorToolStripMenuItem
             // 
             this.proveedorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoProveedorToolStripMenuItem,
             this.actualizarDatosProveedorToolStripMenuItem,
-            this.buscarProveedorToolStripMenuItem});
+            this.buscarProveedorToolStripMenuItem,
+            this.mostrarProveedoresToolStripMenuItem});
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
             this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proveedorToolStripMenuItem.Text = "Proveedor";
@@ -359,14 +400,14 @@ namespace TP1_Laboratorio_II
             // nuevoProveedorToolStripMenuItem
             // 
             this.nuevoProveedorToolStripMenuItem.Name = "nuevoProveedorToolStripMenuItem";
-            this.nuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.nuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.nuevoProveedorToolStripMenuItem.Text = "Nuevo Proveedor";
             // 
             // actualizarDatosProveedorToolStripMenuItem
             // 
             this.actualizarDatosProveedorToolStripMenuItem.Name = "actualizarDatosProveedorToolStripMenuItem";
-            this.actualizarDatosProveedorToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.actualizarDatosProveedorToolStripMenuItem.Text = "Actualizar Datos Proveedor";
+            this.actualizarDatosProveedorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.actualizarDatosProveedorToolStripMenuItem.Text = "Editar Proveedor";
             // 
             // buscarProveedorToolStripMenuItem
             // 
@@ -375,7 +416,7 @@ namespace TP1_Laboratorio_II
             this.buscarPorCUITToolStripMenuItem1,
             this.buscarPorRazonSocialToolStripMenuItem1});
             this.buscarProveedorToolStripMenuItem.Name = "buscarProveedorToolStripMenuItem";
-            this.buscarProveedorToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.buscarProveedorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.buscarProveedorToolStripMenuItem.Text = "Buscar Proveedor";
             // 
             // buscarPorIDToolStripMenuItem1
@@ -395,6 +436,164 @@ namespace TP1_Laboratorio_II
             this.buscarPorRazonSocialToolStripMenuItem1.Name = "buscarPorRazonSocialToolStripMenuItem1";
             this.buscarPorRazonSocialToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
             this.buscarPorRazonSocialToolStripMenuItem1.Text = "Buscar por Razon Social";
+            // 
+            // mostrarProveedoresToolStripMenuItem
+            // 
+            this.mostrarProveedoresToolStripMenuItem.Name = "mostrarProveedoresToolStripMenuItem";
+            this.mostrarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.mostrarProveedoresToolStripMenuItem.Text = "Mostrar Proveedores";
+            // 
+            // informesToolStripMenuItem
+            // 
+            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesToolStripMenuItem,
+            this.proveedoresToolStripMenuItem,
+            this.presupuestosToolStripMenuItem,
+            this.productosToolStripMenuItem,
+            this.materialesToolStripMenuItem1});
+            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.informesToolStripMenuItem.Text = "Informes";
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarACSVToolStripMenuItem,
+            this.exportarAJSONToolStripMenuItem,
+            this.exportarAPDFToolStripMenuItem});
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // exportarACSVToolStripMenuItem
+            // 
+            this.exportarACSVToolStripMenuItem.Name = "exportarACSVToolStripMenuItem";
+            this.exportarACSVToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.exportarACSVToolStripMenuItem.Text = "Exportar a CSV";
+            // 
+            // exportarAJSONToolStripMenuItem
+            // 
+            this.exportarAJSONToolStripMenuItem.Name = "exportarAJSONToolStripMenuItem";
+            this.exportarAJSONToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.exportarAJSONToolStripMenuItem.Text = "Exportar a JSON";
+            // 
+            // exportarAPDFToolStripMenuItem
+            // 
+            this.exportarAPDFToolStripMenuItem.Name = "exportarAPDFToolStripMenuItem";
+            this.exportarAPDFToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.exportarAPDFToolStripMenuItem.Text = "Exportar a PDF";
+            // 
+            // proveedoresToolStripMenuItem
+            // 
+            this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarACSVToolStripMenuItem1,
+            this.exportarAJSONToolStripMenuItem1,
+            this.exportarAPDFToolStripMenuItem1});
+            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            // 
+            // exportarACSVToolStripMenuItem1
+            // 
+            this.exportarACSVToolStripMenuItem1.Name = "exportarACSVToolStripMenuItem1";
+            this.exportarACSVToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.exportarACSVToolStripMenuItem1.Text = "Exportar a CSV";
+            // 
+            // exportarAJSONToolStripMenuItem1
+            // 
+            this.exportarAJSONToolStripMenuItem1.Name = "exportarAJSONToolStripMenuItem1";
+            this.exportarAJSONToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.exportarAJSONToolStripMenuItem1.Text = "Exportar a JSON";
+            // 
+            // exportarAPDFToolStripMenuItem1
+            // 
+            this.exportarAPDFToolStripMenuItem1.Name = "exportarAPDFToolStripMenuItem1";
+            this.exportarAPDFToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.exportarAPDFToolStripMenuItem1.Text = "Exportar a PDF";
+            // 
+            // presupuestosToolStripMenuItem
+            // 
+            this.presupuestosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarACSVToolStripMenuItem2,
+            this.exportarAJSONToolStripMenuItem2,
+            this.exportarAPDFToolStripMenuItem2});
+            this.presupuestosToolStripMenuItem.Name = "presupuestosToolStripMenuItem";
+            this.presupuestosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.presupuestosToolStripMenuItem.Text = "Presupuestos";
+            // 
+            // exportarACSVToolStripMenuItem2
+            // 
+            this.exportarACSVToolStripMenuItem2.Name = "exportarACSVToolStripMenuItem2";
+            this.exportarACSVToolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
+            this.exportarACSVToolStripMenuItem2.Text = "Exportar a CSV";
+            // 
+            // exportarAJSONToolStripMenuItem2
+            // 
+            this.exportarAJSONToolStripMenuItem2.Name = "exportarAJSONToolStripMenuItem2";
+            this.exportarAJSONToolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
+            this.exportarAJSONToolStripMenuItem2.Text = "Exportar a JSON";
+            // 
+            // exportarAPDFToolStripMenuItem2
+            // 
+            this.exportarAPDFToolStripMenuItem2.Name = "exportarAPDFToolStripMenuItem2";
+            this.exportarAPDFToolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
+            this.exportarAPDFToolStripMenuItem2.Text = "Exportar a PDF";
+            // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarACSVToolStripMenuItem3,
+            this.exportarAJSONToolStripMenuItem3,
+            this.exportarAPDFToolStripMenuItem3});
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.productosToolStripMenuItem.Text = "Productos";
+            // 
+            // exportarACSVToolStripMenuItem3
+            // 
+            this.exportarACSVToolStripMenuItem3.Name = "exportarACSVToolStripMenuItem3";
+            this.exportarACSVToolStripMenuItem3.Size = new System.Drawing.Size(158, 22);
+            this.exportarACSVToolStripMenuItem3.Text = "Exportar a CSV";
+            // 
+            // exportarAJSONToolStripMenuItem3
+            // 
+            this.exportarAJSONToolStripMenuItem3.Name = "exportarAJSONToolStripMenuItem3";
+            this.exportarAJSONToolStripMenuItem3.Size = new System.Drawing.Size(158, 22);
+            this.exportarAJSONToolStripMenuItem3.Text = "Exportar a JSON";
+            // 
+            // exportarAPDFToolStripMenuItem3
+            // 
+            this.exportarAPDFToolStripMenuItem3.Name = "exportarAPDFToolStripMenuItem3";
+            this.exportarAPDFToolStripMenuItem3.Size = new System.Drawing.Size(158, 22);
+            this.exportarAPDFToolStripMenuItem3.Text = "Exportar a PDF";
+            // 
+            // materialesToolStripMenuItem1
+            // 
+            this.materialesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarACSVToolStripMenuItem4,
+            this.exportarAJSONToolStripMenuItem4,
+            this.exportarAPDFToolStripMenuItem4});
+            this.materialesToolStripMenuItem1.Name = "materialesToolStripMenuItem1";
+            this.materialesToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.materialesToolStripMenuItem1.Text = "Materiales";
+            // 
+            // exportarACSVToolStripMenuItem4
+            // 
+            this.exportarACSVToolStripMenuItem4.Name = "exportarACSVToolStripMenuItem4";
+            this.exportarACSVToolStripMenuItem4.Size = new System.Drawing.Size(158, 22);
+            this.exportarACSVToolStripMenuItem4.Text = "Exportar a CSV";
+            // 
+            // exportarAJSONToolStripMenuItem4
+            // 
+            this.exportarAJSONToolStripMenuItem4.Name = "exportarAJSONToolStripMenuItem4";
+            this.exportarAJSONToolStripMenuItem4.Size = new System.Drawing.Size(158, 22);
+            this.exportarAJSONToolStripMenuItem4.Text = "Exportar a JSON";
+            // 
+            // exportarAPDFToolStripMenuItem4
+            // 
+            this.exportarAPDFToolStripMenuItem4.Name = "exportarAPDFToolStripMenuItem4";
+            this.exportarAPDFToolStripMenuItem4.Size = new System.Drawing.Size(158, 22);
+            this.exportarAPDFToolStripMenuItem4.Text = "Exportar a PDF";
             // 
             // aboutItToolStripMenuItem
             // 
@@ -418,21 +617,6 @@ namespace TP1_Laboratorio_II
             this.toolStripMenuItem8.Size = new System.Drawing.Size(177, 22);
             this.toolStripMenuItem8.Text = "Contacto";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listadoUsuariosToolStripMenuItem});
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.usuariosToolStripMenuItem.Text = "Listas";
-            // 
-            // listadoUsuariosToolStripMenuItem
-            // 
-            this.listadoUsuariosToolStripMenuItem.Name = "listadoUsuariosToolStripMenuItem";
-            this.listadoUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listadoUsuariosToolStripMenuItem.Text = "Listado Usuarios";
-            this.listadoUsuariosToolStripMenuItem.Click += new System.EventHandler(this.listadoUsuariosToolStripMenuItem_Click);
             // 
             // PantallaPrincipal
             // 
@@ -469,13 +653,10 @@ namespace TP1_Laboratorio_II
     private ToolStripMenuItem nuevoProductoToolStripMenuItem;
     private ToolStripMenuItem buscarProductoToolStripMenuItem;
     private ToolStripMenuItem editarProductoToolStripMenuItem;
-    private ToolStripMenuItem eliminarProductoToolStripMenuItem;
     private ToolStripMenuItem materiasPrimasToolStripMenuItem;
     private ToolStripMenuItem nuevoMaterialToolStripMenuItem;
     private ToolStripMenuItem buscarMaterialToolStripMenuItem;
     private ToolStripMenuItem editarMaterialToolStripMenuItem;
-    private ToolStripMenuItem eliminarMaterialToolStripMenuItem;
-    private ToolStripMenuItem inventarioToolStripMenuItem;
     private ToolStripMenuItem invetarioMaterialesToolStripMenuItem;
     private ToolStripMenuItem inventarioProductosToolStripMenuItem;
     private ToolStripMenuItem aboutToolStripMenuItem;
@@ -490,14 +671,9 @@ namespace TP1_Laboratorio_II
     private ToolStripMenuItem toolStripMenuItem7;
     private ToolStripMenuItem toolStripMenuItem8;
     private ToolStripMenuItem materialesToolStripMenuItem;
-    private ToolStripMenuItem eliminarPresupuestoToolStripMenuItem;
     private ToolStripMenuItem mostrarPresupuestosToolStripMenuItem;
-    private ToolStripMenuItem actualizarTodosLosProductosToolStripMenuItem;
-    private ToolStripMenuItem inventarioDeMaterialesToolStripMenuItem;
-    private ToolStripMenuItem inventarioDeProductosToolStripMenuItem;
     private ToolStripMenuItem clienteToolStripMenuItem;
     private ToolStripMenuItem nuevoClienteToolStripMenuItem;
-    private ToolStripMenuItem actualizarDatosClienteToolStripMenuItem;
     private ToolStripMenuItem buscarClienteToolStripMenuItem;
     private ToolStripMenuItem buscarPorIDToolStripMenuItem;
     private ToolStripMenuItem buscarPorCUITToolStripMenuItem;
@@ -511,7 +687,37 @@ namespace TP1_Laboratorio_II
     private ToolStripMenuItem buscarPorRazonSocialToolStripMenuItem1;
     private ToolStripMenuItem productoReventaToolStripMenuItem;
     private ToolStripMenuItem productoFabricacionToolStripMenuItem;
-    private ToolStripMenuItem usuariosToolStripMenuItem;
-    private ToolStripMenuItem listadoUsuariosToolStripMenuItem;
+    private ToolStripMenuItem buscarPorIdToolStripMenuItem3;
+    private ToolStripMenuItem buscarPorNomnreToolStripMenuItem;
+    private ToolStripMenuItem mostrarProductosToolStripMenuItem;
+    private ToolStripMenuItem buscarPorIDToolStripMenuItem2;
+    private ToolStripMenuItem buscarPorNombreToolStripMenuItem;
+    private ToolStripMenuItem mostrarMaterialesToolStripMenuItem;
+    private ToolStripMenuItem editarClienteToolStripMenuItem;
+    private ToolStripMenuItem mostrarClientesToolStripMenuItem;
+    private ToolStripMenuItem buscarPorIDToolStripMenuItem4;
+    private ToolStripMenuItem buscarPorClienteToolStripMenuItem;
+    private ToolStripMenuItem mostrarProveedoresToolStripMenuItem;
+    private ToolStripMenuItem informesToolStripMenuItem;
+    private ToolStripMenuItem clientesToolStripMenuItem;
+    private ToolStripMenuItem exportarACSVToolStripMenuItem;
+    private ToolStripMenuItem exportarAJSONToolStripMenuItem;
+    private ToolStripMenuItem exportarAPDFToolStripMenuItem;
+    private ToolStripMenuItem proveedoresToolStripMenuItem;
+    private ToolStripMenuItem exportarACSVToolStripMenuItem1;
+    private ToolStripMenuItem exportarAJSONToolStripMenuItem1;
+    private ToolStripMenuItem exportarAPDFToolStripMenuItem1;
+    private ToolStripMenuItem presupuestosToolStripMenuItem;
+    private ToolStripMenuItem exportarACSVToolStripMenuItem2;
+    private ToolStripMenuItem exportarAJSONToolStripMenuItem2;
+    private ToolStripMenuItem exportarAPDFToolStripMenuItem2;
+    private ToolStripMenuItem productosToolStripMenuItem;
+    private ToolStripMenuItem exportarACSVToolStripMenuItem3;
+    private ToolStripMenuItem exportarAJSONToolStripMenuItem3;
+    private ToolStripMenuItem exportarAPDFToolStripMenuItem3;
+    private ToolStripMenuItem materialesToolStripMenuItem1;
+    private ToolStripMenuItem exportarACSVToolStripMenuItem4;
+    private ToolStripMenuItem exportarAJSONToolStripMenuItem4;
+    private ToolStripMenuItem exportarAPDFToolStripMenuItem4;
   }
 }
