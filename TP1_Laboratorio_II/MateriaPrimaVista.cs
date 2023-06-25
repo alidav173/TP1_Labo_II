@@ -112,7 +112,7 @@ namespace TP1_Laboratorio_II
         string tipo = listBox1.SelectedItem.ToString();
         string precio = textBox4.Text;
         string unidadMedida = textBox5.Text;
-        string mensajeControlador = ControladorMaterial.ConectarDBMaterial(nombreMaterial, descripcion, tipo, precio, unidadMedida);
+        string mensajeControlador = ControladorMaterial.Agregar(nombreMaterial, descripcion, tipo, precio, unidadMedida);
 
         if (mensajeControlador.Contains("Se creó el material con ID"))
         {

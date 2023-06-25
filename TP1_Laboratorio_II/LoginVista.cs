@@ -36,7 +36,7 @@ namespace TP1_Laboratorio_II
  
         string email = textBoxUsuario.Text;
         string contraseña = textBoxContraseña.Text;
-        string mensaje = ControladorLogin.ConectarBd(email, contraseña);
+        string mensaje = ControladorLogin.ComprobarUsuario(email, contraseña);
         MessageBox.Show(mensaje);
         if (mensaje == "¡Bienvenido!")
         {

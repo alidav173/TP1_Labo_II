@@ -45,7 +45,7 @@ namespace TP1_Laboratorio_II
         string costoProducto = textBox6.Text;
         string porcentajeGanancia = textBox4.Text;
         List<MateriaPrima> lista = new List<MateriaPrima>();
-        string mensajeControlador = ControladorProducto.ConectarDB(nombreProducto, descripcion, costoProducto, porcentajeGanancia, Producto.tipoProducto.Reventa.ToString(), lista);
+        string mensajeControlador = ControladorProducto.Agregar(nombreProducto, descripcion, costoProducto, porcentajeGanancia, Producto.tipoProducto.Reventa.ToString(), lista);
         MessageBox.Show(mensajeControlador);
         if (mensajeControlador.Contains("Se creó el Producto"))
           {

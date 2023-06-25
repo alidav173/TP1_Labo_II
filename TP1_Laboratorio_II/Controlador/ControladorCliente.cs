@@ -66,9 +66,8 @@ namespace TP1_Laboratorio_II.Controlador
         if (mensajeControlador == "datos validos")
         {
           int.TryParse(cuit, out cuitInt);
-          Cliente clienteNuevo = new Cliente();
-          string mensaje = BuscarClientePorCuit(cuitInt);
-          if (mensaje == "No se encontro el cliente")
+          Cliente clienteNuevo = BuscarClientePorCuit(cuitInt);
+          if (clienteNuevo is null)
           {
             var client = ConexionDatos.ConectarBD();
             clienteNuevo = new Cliente(cuitInt, razonSocial, tipoCliente);
@@ -99,20 +98,20 @@ namespace TP1_Laboratorio_II.Controlador
 
     }
 
-    public static string BuscarClientePorCuit(int cuit)
+    public static Cliente BuscarClientePorCuit(int cuit)
     {
-      string mensaje = String.Empty;
+      Cliente clienteBuscado = null;
       try
       {
         var client = ConexionDatos.ConectarBD();
         for (int i = 1; i < 20; i++)
         {
           FirebaseResponse response = client.Get("Clientes/" + i);
-          Cliente clienteBuscado = response.ResultAs<Cliente>();
+          Cliente cliente = response.ResultAs<Cliente>();
 
-          if (clienteBuscado.Cuit == cuit)
+          if (cliente.Cuit == cuit)
           {
-            mensaje = "Cliente existente";
+            clienteBuscado = cliente;
             break;
           }
         }
@@ -120,9 +119,9 @@ namespace TP1_Laboratorio_II.Controlador
       }
       catch (Exception ex)
       {
-        mensaje = "No se encontro el cliente";
+        string mensaje = "No se encontro el cliente" + ex;
       }
-      return mensaje;
+      return clienteBuscado;
     }
 
     public static Cliente BuscarPorId(int id)
@@ -140,7 +139,6 @@ namespace TP1_Laboratorio_II.Controlador
           if (clienteBuscado.Id == id)
           {
             cliente = clienteBuscado;
-            mensaje = "Cliente existente";
             break;
           }
         }

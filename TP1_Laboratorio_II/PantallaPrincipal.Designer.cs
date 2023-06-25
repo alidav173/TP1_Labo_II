@@ -326,21 +326,21 @@ namespace TP1_Laboratorio_II
             // exportarACSVToolStripMenuItem
             // 
             this.exportarACSVToolStripMenuItem.Name = "exportarACSVToolStripMenuItem";
-            this.exportarACSVToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportarACSVToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exportarACSVToolStripMenuItem.Text = "Exportar a CSV";
             this.exportarACSVToolStripMenuItem.Click += new System.EventHandler(this.exportarACSVToolStripMenuItem_Click);
             // 
             // exportarAJSONToolStripMenuItem
             // 
             this.exportarAJSONToolStripMenuItem.Name = "exportarAJSONToolStripMenuItem";
-            this.exportarAJSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportarAJSONToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exportarAJSONToolStripMenuItem.Text = "Exportar a JSON";
             this.exportarAJSONToolStripMenuItem.Click += new System.EventHandler(this.exportarAJSONToolStripMenuItem_Click);
             // 
             // exportarAPDFToolStripMenuItem
             // 
             this.exportarAPDFToolStripMenuItem.Name = "exportarAPDFToolStripMenuItem";
-            this.exportarAPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportarAPDFToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exportarAPDFToolStripMenuItem.Text = "Exportar a PDF";
             this.exportarAPDFToolStripMenuItem.Click += new System.EventHandler(this.exportarAPDFToolStripMenuItem_Click);
             // 
@@ -358,20 +358,23 @@ namespace TP1_Laboratorio_II
             // exportarACSVToolStripMenuItem2
             // 
             this.exportarACSVToolStripMenuItem2.Name = "exportarACSVToolStripMenuItem2";
-            this.exportarACSVToolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
+            this.exportarACSVToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.exportarACSVToolStripMenuItem2.Text = "Exportar a CSV";
+            this.exportarACSVToolStripMenuItem2.Click += new System.EventHandler(this.exportarACSVToolStripMenuItem2_Click);
             // 
             // exportarAJSONToolStripMenuItem2
             // 
             this.exportarAJSONToolStripMenuItem2.Name = "exportarAJSONToolStripMenuItem2";
-            this.exportarAJSONToolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
+            this.exportarAJSONToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.exportarAJSONToolStripMenuItem2.Text = "Exportar a JSON";
+            this.exportarAJSONToolStripMenuItem2.Click += new System.EventHandler(this.exportarAJSONToolStripMenuItem2_Click);
             // 
             // exportarAPDFToolStripMenuItem2
             // 
             this.exportarAPDFToolStripMenuItem2.Name = "exportarAPDFToolStripMenuItem2";
-            this.exportarAPDFToolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
+            this.exportarAPDFToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.exportarAPDFToolStripMenuItem2.Text = "Exportar a PDF";
+            this.exportarAPDFToolStripMenuItem2.Click += new System.EventHandler(this.exportarAPDFToolStripMenuItem2_Click);
             // 
             // productosToolStripMenuItem
             // 
@@ -469,14 +472,14 @@ namespace TP1_Laboratorio_II
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(177, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem7.Text = "Acerca del software";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(177, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem8.Text = "Contacto";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 

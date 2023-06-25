@@ -42,14 +42,14 @@ namespace TP1_Laboratorio_II
         int Idint;
         if (!string.IsNullOrEmpty(Id) & int.TryParse(Id, out Idint) == true)
         {
-          Producto productoBuscado = ControladorProducto.BuscarProductoPorID(Id);
+          Producto productoBuscado = ControladorProducto.BuscarPorID(Id);
           if (productoBuscado != null)
           {
             MessageBox.Show(productoBuscado.MostrarDatos());
-            textBox2.Text = productoBuscado.NombreProducto;
-            textBox3.Text = productoBuscado.CostoProducto.ToString();
-            textBox4.Text = productoBuscado.DescripcionProducto;
-            textBox5.Text = productoBuscado.PrecioProducto.ToString();
+            textBox2.Text = productoBuscado.Nombre;
+            textBox3.Text = productoBuscado.Costo.ToString();
+            textBox4.Text = productoBuscado.Descripcion;
+            textBox5.Text = productoBuscado.Precio.ToString();
             this.Close();
           }
           else
@@ -109,10 +109,10 @@ namespace TP1_Laboratorio_II
           if (productoBuscado != null)
           {
             MessageBox.Show(productoBuscado.MostrarDatos());
-            textBox1.Text = productoBuscado.IdProducto.ToString();
-            textBox3.Text = productoBuscado.CostoProducto.ToString();
-            textBox4.Text = productoBuscado.DescripcionProducto;
-            textBox5.Text = productoBuscado.PrecioProducto.ToString();
+            textBox1.Text = productoBuscado.Id.ToString();
+            textBox3.Text = productoBuscado.Costo.ToString();
+            textBox4.Text = productoBuscado.Descripcion;
+            textBox5.Text = productoBuscado.Precio.ToString();
             this.Close();
           }
           else

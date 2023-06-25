@@ -63,7 +63,7 @@ namespace Controlador
     /// <returns>
     ///REtorna una cadena de texto con el mensaje ¡Bienvenido!", sino una cadena con el error.
     /// </returns>
-    public static string ConectarBd(string email, string contraseña)
+    public static string ComprobarUsuario(string email, string contraseña)
     {
       
       string mensajeSalida = string.Empty;

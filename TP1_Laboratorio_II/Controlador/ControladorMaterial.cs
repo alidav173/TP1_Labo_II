@@ -1,5 +1,6 @@
 using Data;
 using FireSharp.Response;
+using Modelos;
 using Modelos.Fabricacion;
 using System;
 using System.Collections.Generic;
@@ -61,23 +62,19 @@ namespace Controlador
     }
 
 
-    public static string ConectarDBMaterial(string nombre, string descripcion, string tipoMaterial, string precio, string unidadMedida)
+    public static string Agregar(string nombre, string descripcion, string tipoMaterial, string precio, string unidadMedida)
     {
       string mensajeSalida = string.Empty;
-      float PrecioFloat;
+
       try
       {
         string mensajeControlador = ValidarDatosMaterial(nombre, descripcion, tipoMaterial, precio, unidadMedida);
         if (mensajeControlador == "datos validos")
         {
-          if (float.TryParse(precio, out PrecioFloat) == true)
-          {
             var client = ConexionDatos.ConectarBD();
-            var nuevoMaterial = new MateriaPrima(nombre, descripcion, tipoMaterial, PrecioFloat, unidadMedida);
+            var nuevoMaterial = new MateriaPrima(nombre, descripcion, tipoMaterial, float.Parse(precio), unidadMedida);
             SetResponse response = client.Set("Materiales/" + nuevoMaterial.Id, nuevoMaterial);
-            //MateriaPrima result = response.ResultAs<MateriaPrima>();
             mensajeSalida = "Se creó el material con ID: " + nuevoMaterial.Id;
-          }
 
         }
         else
@@ -96,35 +93,24 @@ namespace Controlador
     }
 
 
-    public static MateriaPrima BuscarMaterialPorID(string id)
+    public static MateriaPrima BuscarPorId(int id)
     {
-
-      string mensajeSalida = string.Empty;
       MateriaPrima materialNuevo = null;
       string mensaje;
       try
       {
         var client = ConexionDatos.ConectarBD();
-        int idMaterial;
-        if (int.TryParse(id, out idMaterial) == true)
-        {
           for (int i = 1; i < 20; i++)
           {
             FirebaseResponse response = client.Get("Materiales/" + i);
             MateriaPrima materia = response.ResultAs<MateriaPrima>();
 
-            if (materia.Id == idMaterial)
+            if (materia.Id == id)
             {
               materialNuevo = materia;
-              mensaje = "Material Encontrado";
               break;
             }
           }
-        }
-        else
-        {
-          throw new NoEsUnEnteroException();
-        }
       }
       catch (NoEsUnEnteroException cv)
       {
@@ -137,5 +123,145 @@ namespace Controlador
 
       return materialNuevo;
     }
+
+    public static string Eliminar(int id)
+    {
+      string mensaje = String.Empty;
+      try
+      {
+        var client = ConexionDatos.ConectarBD();
+        for (int i = 1; i < 20; i++)
+        {
+          FirebaseResponse response = client.Get("Materiales/" + i);
+          Cliente clienteBuscado = response.ResultAs<Cliente>();
+
+          if (clienteBuscado.Id == id)
+          {
+            response = client.Delete("Materiales/" + i);
+            mensaje = "Material eliminado";
+            break;
+          }
+
+        }
+      }
+      catch (Exception ex)
+      {
+        mensaje = "No se encontro el material";
+      }
+
+      return mensaje;
+    }
+
+    public static string Actualizar(MateriaPrima materiaPrima)
+    {
+      string mensaje = String.Empty;
+      try
+      {
+        var client = ConexionDatos.ConectarBD();
+        FirebaseResponse response = client.Update("Materiales/" + materiaPrima.Id, materiaPrima);
+        mensaje = "Se actualizaron los datos de la materia prima";
+
+      }
+      catch (Exception ex)
+      {
+        mensaje = "No se pudieron actulizar los datos de la materia prima";
+      }
+
+      return mensaje;
+    }
+
+
+
+    public static string ExportarAJson(string rutaAcceso)
+    {
+      string mensaje = String.Empty;
+      try
+      {
+        List<MateriaPrima> materiales = new List<MateriaPrima>();
+        MateriaPrima materialNuevo;
+        for (int id = 1; id < 20; id++)
+        {
+          materialNuevo = BuscarPorId(id);
+          if (materialNuevo is not null)
+          {
+            materiales.Add(materialNuevo);
+          }
+
+        }
+        string json = Serializador<MateriaPrima>.SerializarJSON(materiales);
+        if (Archivo.EscribirEnArchivoJSON(json, rutaAcceso))
+        {
+          mensaje = "Archivo generado";
+        }
+      }
+      catch (Exception ex)
+      {
+        mensaje = "error" + ex;
+      }
+
+      return mensaje;
+    }
+
+    public static string ExportarAcsv(string rutaAcceso)
+    {
+      string mensaje = String.Empty;
+      try
+      {
+        List<MateriaPrima> materiales = new List<MateriaPrima>();
+        MateriaPrima materialNuevo;
+        for (int id = 1; id < 20; id++)
+        {
+          materialNuevo = BuscarPorId(id);
+          if (materialNuevo is not null)
+          {
+            materiales.Add(materialNuevo);
+          }
+
+        }
+        Archivo.EscribirEnArchivoCsv<MateriaPrima>(rutaAcceso, materiales);
+        mensaje = "Archivo generado";
+
+      }
+      catch (Exception ex)
+      {
+        mensaje = "error" + ex;
+      }
+
+      return mensaje;
+    }
+
+    public static string ExportarApdf(string rutaAcceso)
+    {
+      string mensaje = String.Empty;
+      try
+      {
+        List<MateriaPrima> materiales = new List<MateriaPrima>();
+        MateriaPrima materialNuevo;
+        for (int id = 1; id < 20; id++)
+        {
+          materialNuevo = BuscarPorId(id);
+          if (materialNuevo is not null)
+          {
+            materiales.Add(materialNuevo);
+          }
+
+        }
+        StringBuilder sb = new StringBuilder();
+        foreach (MateriaPrima material in materiales)
+        {
+          sb.AppendLine(material.MostrarDatos());
+        }
+        Archivo.EscribirEnArchivoPdf(rutaAcceso, sb.ToString());
+        mensaje = "Archivo generado";
+
+      }
+      catch (Exception ex)
+      {
+        mensaje = "error" + ex;
+      }
+
+      return mensaje;
+    }
+
   }
 }

@@ -84,34 +84,33 @@ namespace Controlador
     /// <returns>
     ///Retorna una cadena de texto con el mensaje "Se creó el Producto con ID:", sino devuelve una cadena con el error.
     /// </returns>
-    public static string ConectarDB(string nombre, string descripcion, string costo, string porcentaje, string tipo, List<MateriaPrima> lista)
+    public static string Agregar(string nombre, string descripcion, string costo, string porcentaje, string tipo, List<MateriaPrima> lista)
     {
       string mensajeSalida = string.Empty;
-      float costoFloat;
-      float porcFloat;
       try
       {
         string mensajeControlador = validarDatos(nombre, descripcion, costo, porcentaje);
         if (mensajeControlador == "datos validos")
         {
-          if (float.TryParse(costo, out costoFloat) == true & float.TryParse(porcentaje, out porcFloat) == true)
-          {
             var client = ConexionDatos.ConectarBD();
+            Producto productoBuscado = BuscarProductoPorNombre(nombre);
+          if (productoBuscado == null)
+          {
             if (tipo == "Reventa")
             {
-              ProductoReventa nuevoProducto = new ProductoReventa(nombre, descripcion, costoFloat);
-              nuevoProducto.CalcularPrecioVenta(porcFloat);
-              SetResponse response = client.Set("Productos/" + nuevoProducto.IdProducto, nuevoProducto);
-              mensajeSalida = "Se creó el Producto con ID: " + nuevoProducto.IdProducto;
+              ProductoReventa nuevoProducto = new ProductoReventa(nombre, descripcion, float.Parse(costo));
+              nuevoProducto.CalcularPrecioVenta(float.Parse(porcentaje));
+              SetResponse response = client.Set("Productos/" + nuevoProducto.Id, nuevoProducto);
+              mensajeSalida = "Se creó el Producto con ID: " + nuevoProducto.Id;
             }
-            else{
-              ProductoFabricacion nuevoProducto2 = new ProductoFabricacion(nombre, descripcion, costoFloat, lista);
-              nuevoProducto2.CalcularPrecioVenta(porcFloat);
-              SetResponse response = client.Set("Productos/" + nuevoProducto2.IdProducto, nuevoProducto2);
-              mensajeSalida = "Se creó el Producto con ID: " + nuevoProducto2.IdProducto;
-            }  
+            else
+            {
+              ProductoFabricacion nuevoProducto2 = new ProductoFabricacion(nombre, descripcion, float.Parse(costo), lista);
+              nuevoProducto2.CalcularPrecioVenta(float.Parse(porcentaje));
+              SetResponse response = client.Set("Productos/" + nuevoProducto2.Id, nuevoProducto2);
+              mensajeSalida = "Se creó el Producto con ID: " + nuevoProducto2.Id;
+            }
           }
-
         }
         else
         {
@@ -148,10 +147,9 @@ namespace Controlador
            FirebaseResponse response =  client.Get("Productos/" +i);
            Producto productoBuscado = response.ResultAs<Producto>();
 
-          if (productoBuscado.NombreProducto == nombre)
+          if (productoBuscado.Nombre == nombre)
             {
             producto = productoBuscado;
-            mensajeSalida = "Producto Encontrado";
             break;
           }
           }
@@ -172,26 +170,26 @@ namespace Controlador
     /// <returns>
     ///Retorna un producto, sino devuelve un producto nulo.
     /// </returns>
-    public static Producto BuscarProductoPorID(string id)
+    public static Producto BuscarPorID(string id)
     {
-      string mensajeSalida = string.Empty;
+
       Producto productoBuscado = null;
-      string mensaje;
+      int idProducto;
       try
       {
         var client = ConexionDatos.ConectarBD();
-        int idProducto;
+      
         if (int.TryParse(id, out idProducto) == true)
         { 
           for (int i = 1001; i < 1100; i++) 
           {
             FirebaseResponse response = client.Get("Productos/" + i);
+
             Producto producto = response.ResultAs<Producto>();
 
-            if (producto.IdProducto == idProducto)
+            if (producto.Id == idProducto)
             {
               productoBuscado = producto;
-              mensaje = "Producto Encontrado";
               break;
             }
           }
@@ -203,11 +201,11 @@ namespace Controlador
       }
       catch (NoEsUnEnteroException cv)
       {
-        mensaje = "No es un numero";
+       string mensaje = "No es un numero";
       }
       catch (Exception ex)
       {
-        mensaje = "No se encontro el producto";
+        string mensaje = "No se encontro el producto";
       }
 
       return productoBuscado;
@@ -224,7 +222,7 @@ namespace Controlador
         {
           StringBuilder sb = new StringBuilder();
           sb.Append($"{id}");
-          productoNuevo = BuscarProductoPorID(sb.ToString());
+          productoNuevo = BuscarPorID(sb.ToString());
           if (productoNuevo is not null)
           {
             productos.Add(productoNuevo);

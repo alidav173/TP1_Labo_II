@@ -31,13 +31,14 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblListado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 24);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -47,7 +48,7 @@
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(122, 350);
+            this.btnSeleccionar.Location = new System.Drawing.Point(121, 358);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(167, 42);
             this.btnSeleccionar.TabIndex = 3;
@@ -57,7 +58,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(410, 354);
+            this.btnCancelar.Location = new System.Drawing.Point(410, 362);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(151, 38);
             this.btnCancelar.TabIndex = 4;
@@ -65,11 +66,21 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblListado
+            // 
+            this.lblListado.AutoSize = true;
+            this.lblListado.Location = new System.Drawing.Point(51, 31);
+            this.lblListado.Name = "lblListado";
+            this.lblListado.Size = new System.Drawing.Size(122, 15);
+            this.lblListado.TabIndex = 6;
+            this.lblListado.Text = "Listado Materia Prima";
+            // 
             // ListadoMateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblListado);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dataGridView1);
@@ -79,6 +90,7 @@
             this.Load += new System.EventHandler(this.ListadoMateriaPrima_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
     }
 
@@ -87,5 +99,6 @@
     private DataGridView dataGridView1;
     private Button btnSeleccionar;
     private Button btnCancelar;
+    private Label lblListado;
   }
 }

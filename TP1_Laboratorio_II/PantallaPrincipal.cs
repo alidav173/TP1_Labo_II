@@ -1,3 +1,4 @@
+using Controlador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,11 +26,6 @@ namespace TP1_Laboratorio_II
     }
 
     private void PantallaPrincipal_Load(object sender, EventArgs e)
-    {
-
-    }
-
-    private void PantallaPrincipal_Load_1(object sender, EventArgs e)
     {
 
     }
@@ -127,13 +123,13 @@ namespace TP1_Laboratorio_II
 
     private void exportarACSVToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      MessageBox.Show(ControladorCliente.ExportarAcsv("C:\\Users\\alida\\source\\repos\\TP1_Laboratorio_II\\Clientes.csv"));
+      MessageBox.Show(ControladorCliente.ExportarAcsv(".\\Clientes.csv"));
 
     }
 
     private void exportarAJSONToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      MessageBox.Show(ControladorCliente.ExportarAJson("C:\\Users\\alida\\source\\repos\\TP1_Laboratorio_II\\Clientes.json"));
+       MessageBox.Show(ControladorCliente.ExportarAJson(".\\Clientes.json"));
     }
 
     private void presupuestosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,7 +139,22 @@ namespace TP1_Laboratorio_II
 
     private void exportarAPDFToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      MessageBox.Show(ControladorCliente.ExportarApdf("C:\\Users\\alida\\source\\repos\\TP1_Laboratorio_II\\Clientes.pdf"));
+      MessageBox.Show(ControladorCliente.ExportarApdf(".\\Clientes.pdf"));
+    }
+
+    private void exportarACSVToolStripMenuItem2_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show(ControladorPresupuesto.ExportarAcsv(".\\Presupuestos.csv"));
+    }
+
+    private void exportarAJSONToolStripMenuItem2_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show(ControladorPresupuesto.ExportarAJson(".\\Presupuestos.json"));
+    }
+
+    private void exportarAPDFToolStripMenuItem2_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show(ControladorPresupuesto.ExportarApdf(".\\Presupuestos.pdf"));
     }
   }
 }

@@ -55,11 +55,11 @@ namespace TP1_Laboratorio_II
           tipo = dataGridView1.SelectedRows[i].Cells[5].Value.ToString();
 
           Producto productoNuevo = new Producto();
-          productoNuevo.IdProducto = int.Parse(id);
-          productoNuevo.NombreProducto = nombre;
-          productoNuevo.DescripcionProducto = descripcion;
-          productoNuevo.CostoProducto = float.Parse(costo);
-          productoNuevo.PrecioProducto = float.Parse(precio);
+          productoNuevo.Id = int.Parse(id);
+          productoNuevo.Nombre = nombre;
+          productoNuevo.Descripcion = descripcion;
+          productoNuevo.Costo = float.Parse(costo);
+          productoNuevo.Precio = float.Parse(precio);
           productoNuevo.TipoProducto = tipo;
           lista.Add(productoNuevo);
         }
@@ -78,21 +78,20 @@ namespace TP1_Laboratorio_II
       dt.Columns.Add("Tipo Producto");
 
       dataGridView1.DataSource = dt;
-      Producto productoNuevo;
       int Id = 1001;
-      productoNuevo =  ControladorProducto.BuscarProductoPorID(Archivo.ConvertirIntAString(Id));
+      Producto productoNuevo =  ControladorProducto.BuscarPorID(Id.ToString());
       while (productoNuevo != null)
       {
           DataRow row = dt.NewRow();
-          row["Id"] = productoNuevo.IdProducto;
-          row["Nombre"] = productoNuevo.NombreProducto;
-          row["Descripción"] = productoNuevo.DescripcionProducto;
-          row["Costo"] = productoNuevo.CostoProducto;
-          row["Precio"] = productoNuevo.PrecioProducto;
+          row["Id"] = productoNuevo.Id;
+          row["Nombre"] = productoNuevo.Nombre;
+          row["Descripción"] = productoNuevo.Descripcion;
+          row["Costo"] = productoNuevo.Costo;
+          row["Precio"] = productoNuevo.Precio;
           row["Tipo Producto"] = productoNuevo.TipoProducto;
         dt.Rows.Add(row);
           Id++;
-        productoNuevo = ControladorProducto.BuscarProductoPorID(Archivo.ConvertirIntAString(Id));
+        productoNuevo = ControladorProducto.BuscarPorID(Id.ToString());
       }
     }
 

@@ -39,22 +39,22 @@ namespace TP1_Laboratorio_II
       
       Producto productoNuevo; 
       int Id = 1001;
-      productoNuevo = ControladorProducto.BuscarProductoPorID(Archivo.ConvertirIntAString(Id));
+      productoNuevo = ControladorProducto.BuscarPorID(Id.ToString());
       while (productoNuevo != null)
       {
         if (productoNuevo.TipoProducto == "Fabricacion")
         {
           DataRow row = dt.NewRow();
-          row["Id"] = productoNuevo.IdProducto;
-          row["Nombre"] = productoNuevo.NombreProducto;
-          row["Descripción"] = productoNuevo.DescripcionProducto;
-          row["Costo"] = productoNuevo.CostoProducto;
-          row["Precio"] = productoNuevo.PrecioProducto;
+          row["Id"] = productoNuevo.Id;
+          row["Nombre"] = productoNuevo.Nombre;
+          row["Descripción"] = productoNuevo.Descripcion;
+          row["Costo"] = productoNuevo.Costo;
+          row["Precio"] = productoNuevo.Precio;
           dt.Rows.Add(row);
         }
         Id++;
         
-        productoNuevo = ControladorProducto.BuscarProductoPorID(Archivo.ConvertirIntAString(Id));
+        productoNuevo = ControladorProducto.BuscarPorID(Id.ToString());
       }
     
     }

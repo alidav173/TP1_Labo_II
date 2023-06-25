@@ -33,7 +33,7 @@ namespace TP1_Laboratorio_II
 
       dataGridView1.DataSource = dt;
       int Id = 1;
-      MateriaPrima materiaNueva = ControladorMaterial.BuscarMaterialPorID(Archivo.ConvertirIntAString(Id));
+      MateriaPrima materiaNueva = ControladorMaterial.BuscarPorId(Id);
       while (materiaNueva != null)
       {
         DataRow row = dt.NewRow();
@@ -45,7 +45,7 @@ namespace TP1_Laboratorio_II
         row["Unidad de medida"] = materiaNueva.UnidadMedida;
         dt.Rows.Add(row);
         Id++;
-        materiaNueva = ControladorMaterial.BuscarMaterialPorID(Archivo.ConvertirIntAString(Id));
+        materiaNueva = ControladorMaterial.BuscarPorId(Id);
       }
         
       }
@@ -55,7 +55,7 @@ namespace TP1_Laboratorio_II
 
     }
 
-    private async void btnSeleccionar_Click(object sender, EventArgs e)
+    private void btnSeleccionar_Click(object sender, EventArgs e)
     {
   
       int filasSeleccionadas = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);

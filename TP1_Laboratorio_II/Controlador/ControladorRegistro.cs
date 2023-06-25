@@ -15,6 +15,7 @@ namespace Controlador
 {
   internal class ControladorRegistro
   {
+    /*
     /// <summary>
     /// Valida los campos de un usuario pasados por parametros
     /// </summary>
@@ -87,6 +88,8 @@ namespace Controlador
       return Validador.esDniValido(dni);
 
     }
+    */
+
     /// <summary>
     /// Verifica y conecta a la BD si los datos pasados por parametros son correctos
     /// </summary>
@@ -100,10 +103,11 @@ namespace Controlador
     /// <returns>
     ///Retorna una cadena de texto con el mensaje "Se creó el Usuario con ID:", sino una cadena con el error.
     /// </returns>
-    public static string ConectarDB(string email, string contraseña,string rContraseña, string nombre, string apellido, string tipo, int dni)
+    public static string Agregar(string email, string contraseña,string rContraseña, string nombre, string apellido, string tipo, int dni)
     {
-      string mensajeSalida = string.Empty;
-      try
+      string mensajeSalida = ControladorUsuario.Agregar(email, contraseña, rContraseña, nombre, apellido, tipo, dni);
+      return mensajeSalida;
+      /*try
       {
         string mensajeControlador = ValidarDatosUsuario(email, contraseña, nombre, apellido);
         if (mensajeControlador == "datos validos" & contraseña == rContraseña)
@@ -130,7 +134,7 @@ namespace Controlador
       }
 
       return mensajeSalida;
-
+      */
     }
 
   }

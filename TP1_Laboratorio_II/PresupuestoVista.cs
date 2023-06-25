@@ -57,7 +57,7 @@ namespace TP1_Laboratorio_II
 
         }
         MessageBox.Show(ControladorPresupuesto.ConectarDB(razonSocial, cuit, tipoCliente, listado, impuestos));
-
+        this.Close();
       }
       catch (Exception ex)
       {
@@ -91,6 +91,7 @@ namespace TP1_Laboratorio_II
         string tipoCliente = listBoxTipoCliente.SelectedItem.ToString();
         mensaje = ControladorCliente.Agregar(cuit, razonSocial, tipoCliente, String.Empty, String.Empty,0);
         MessageBox.Show(mensaje);
+
       }
       catch (Exception ex)
       {

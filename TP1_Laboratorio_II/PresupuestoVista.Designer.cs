@@ -210,7 +210,7 @@
             // 
             // btnCrearPres
             // 
-            this.btnCrearPres.Location = new System.Drawing.Point(182, 386);
+            this.btnCrearPres.Location = new System.Drawing.Point(72, 386);
             this.btnCrearPres.Name = "btnCrearPres";
             this.btnCrearPres.Size = new System.Drawing.Size(145, 36);
             this.btnCrearPres.TabIndex = 18;
@@ -230,7 +230,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(370, 386);
+            this.btnCancelar.Location = new System.Drawing.Point(257, 386);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(145, 36);
             this.btnCancelar.TabIndex = 20;
