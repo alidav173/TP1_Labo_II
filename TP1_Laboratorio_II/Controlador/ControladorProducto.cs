@@ -1,3 +1,4 @@
+using Data;
 using FireSharp.Response;
 using Modelos;
 using Modelos.Fabricacion;
@@ -211,6 +212,39 @@ namespace Controlador
 
       return productoBuscado;
     }
+
+    public static string ExportarProductosAJson(string rutaAcceso)
+    {
+      string mensaje = String.Empty;
+      try
+      {
+        List<Producto> productos= new List<Producto>();
+        Producto productoNuevo;
+        for (int id = 1; id < 20; id++)
+        {
+          StringBuilder sb = new StringBuilder();
+          sb.Append($"{id}");
+          productoNuevo = BuscarProductoPorID(sb.ToString());
+          if (productoNuevo is not null)
+          {
+            productos.Add(productoNuevo);
+          }
+          sb.Clear();
+        }
+        string json = Serializador<Producto>.SerializarJSON(productos);
+        if (Archivo.EscribirEnArchivoJSON(json, rutaAcceso))
+        {
+          mensaje = "Archivo generado";
+        }
+      }
+      catch (Exception ex)
+      {
+        mensaje = "error" + ex;
+      }
+
+      return mensaje;
+    }
+
 
   }
 }

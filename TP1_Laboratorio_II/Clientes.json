@@ -1,0 +1,42 @@
+[
+  {
+    "TipoCliente": "Responsable_Inscripto",
+    "Presupuestos": [],
+    "Id": 1,
+    "RazonSocial": "La fabrica del taco",
+    "Cuit": 25785785,
+    "Email": "lafabricadeltaco@gmail.com",
+    "Telefono": 1123587896,
+    "Direccion": "Gorriti 4586, CABA"
+  },
+  {
+    "TipoCliente": "Responsable_Inscripto",
+    "Presupuestos": [],
+    "Id": 2,
+    "RazonSocial": "Aguila Calva",
+    "Cuit": 205995354,
+    "Email": "aguilac@hotmail.com",
+    "Telefono": 1150429878,
+    "Direccion": "Carlos Calvo 43, Avellaneda"
+  },
+  {
+    "TipoCliente": "Consumidor_Final",
+    "Presupuestos": [],
+    "Id": 3,
+    "RazonSocial": "El Palacio del Blumer",
+    "Cuit": 235458563,
+    "Email": "elpalaciodelblumer@gmail.com",
+    "Telefono": 112354856,
+    "Direccion": "Peru 159, CABA"
+  },
+  {
+    "TipoCliente": "Responsable_Inscripto",
+    "Presupuestos": [],
+    "Id": 4,
+    "RazonSocial": "Sony Argentina",
+    "Cuit": 25658945,
+    "Email": "sony@sony.com",
+    "Telefono": 115879531,
+    "Direccion": "Rivadavia 1230"
+  }
+]

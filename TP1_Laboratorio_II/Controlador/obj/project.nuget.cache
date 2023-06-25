@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HeBbI/PpTqfSBLaszkbdCTMqA9OBJ2nu0N4n2/uSu7qo0RLZ0U8oJ5c80vbPAmGpsMpWhmtAg9tLFuY9kV4+Xg==",
+  "dgSpecHash": "k8s07FRTEAu+kUX8Kzr6RUpj1BFMXXKpqREhQ+y6ORSSKj6jSfFzC/AT85aHLnBTHefAa6j5MPE+0R9hud+OcA==",
   "success": true,
   "projectFilePath": "C:\\Users\\alida\\source\\repos\\TP1_Laboratorio_II\\Controlador\\Controlador.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\alida\\.nuget\\packages\\cete.dynamicpdf.coresuite.net\\12.4.0\\cete.dynamicpdf.coresuite.net.12.4.0.nupkg.sha512",
     "C:\\Users\\alida\\.nuget\\packages\\firebaseauthentication.net\\4.0.2\\firebaseauthentication.net.4.0.2.nupkg.sha512",
     "C:\\Users\\alida\\.nuget\\packages\\firebasedatabase.net\\4.2.0\\firebasedatabase.net.4.2.0.nupkg.sha512",
     "C:\\Users\\alida\\.nuget\\packages\\firesharp\\1.1.0\\firesharp.1.1.0.nupkg.sha512",
@@ -27,6 +28,8 @@
     "C:\\Users\\alida\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\alida\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
     "C:\\Users\\alida\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\alida\\.nuget\\packages\\system.security.cryptography.cng\\4.7.0\\system.security.cryptography.cng.4.7.0.nupkg.sha512",
+    "C:\\Users\\alida\\.nuget\\packages\\system.security.cryptography.pkcs\\4.7.0\\system.security.cryptography.pkcs.4.7.0.nupkg.sha512",
     "C:\\Users\\alida\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\alida\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\alida\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"

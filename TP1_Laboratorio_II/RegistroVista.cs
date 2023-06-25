@@ -77,12 +77,12 @@ namespace TP1_Laboratorio_II
         string contraseña = textBox5.Text;
         string rContraseña = textBox6.Text;
         string ?tipoUsuario = listBox_Usuario.SelectedItem.ToString();
-        ControladorBase controladorUno = new ControladorBase();
+        //ControladorBase controladorUno = new ControladorBase();
         Usuario usuarioNuevo = new Usuario(email,contraseña,nombre,apellido);
         usuarioNuevo.TipoUsuario = 1;
         usuarioNuevo.Dni = dni;
         //string mensaje = ControladorRegistro.ConectarDB(email, contraseña, rContraseña, nombre, apellido, tipoUsuario,dni);
-        MessageBox.Show(controladorUno.Agregar(usuarioNuevo,"Usuarios"));
+       // MessageBox.Show(controladorUno.Agregar(usuarioNuevo,"Usuarios"));
         this.Close();
 
       }

@@ -17,7 +17,7 @@ namespace TP1_Laboratorio_II
     {
       InitializeComponent();
       this.IsMdiContainer = true;
-      textBox1.Text = ParserCSV.leerDesdeTxt("C:\\Users\\alida\\source\\repos\\TP1_Laboratorio_II\\Contacto.txt");
+      textBox1.Text = Archivo.leerDesdeTxt("C:\\Users\\alida\\source\\repos\\TP1_Laboratorio_II\\Contacto.txt");
     }
 
     private void textBox1_TextChanged(object sender, EventArgs e)

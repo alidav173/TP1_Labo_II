@@ -89,7 +89,7 @@ namespace TP1_Laboratorio_II
         string razonSocial = txtBxNombreCliente.Text;
         string cuit = txtbxCuit.Text;
         string tipoCliente = listBoxTipoCliente.SelectedItem.ToString();
-        mensaje = ControladorCliente.ConectarDB(cuit, razonSocial, tipoCliente);
+        mensaje = ControladorCliente.Agregar(cuit, razonSocial, tipoCliente, String.Empty, String.Empty,0);
         MessageBox.Show(mensaje);
       }
       catch (Exception ex)
@@ -99,7 +99,7 @@ namespace TP1_Laboratorio_II
       }
     }
 
-    private async void btnAgregarProducto_Click(object sender, EventArgs e)
+    private void btnAgregarProducto_Click(object sender, EventArgs e)
     {
        ListadoProductos lp = new ListadoProductos();
        lp.Show();

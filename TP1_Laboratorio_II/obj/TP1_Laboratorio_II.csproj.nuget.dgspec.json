@@ -55,6 +55,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
+            },
+            "ceTe.DynamicPDF.CoreSuite.NET": {
+              "target": "Package",
+              "version": "[12.4.0, )"
             }
           },
           "imports": [
@@ -132,6 +136,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
+            },
+            "ceTe.DynamicPDF.CoreSuite.NET": {
+              "target": "Package",
+              "version": "[12.4.0, )"
             }
           },
           "imports": [
@@ -216,6 +224,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
+            },
+            "ceTe.DynamicPDF.CoreSuite.NET": {
+              "target": "Package",
+              "version": "[12.4.0, )"
             }
           },
           "imports": [

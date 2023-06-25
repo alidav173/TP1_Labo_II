@@ -1,3 +1,4 @@
+using Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,7 +32,10 @@ namespace TP1_Laboratorio_II
         string razonSocial = txtBxRazonSocial.Text;
         string cuit = txtbxCuit.Text;
         string tipoCLiente = listBoxTipoCliente.SelectedItem.ToString();
-        mensaje = ControladorCliente.ConectarDB(cuit, razonSocial, tipoCLiente);
+        string email = txtBxEmail.Text;
+        string direccion = txtBxDireccion.Text;
+        string telefono = txtBxTelefono.Text;
+        mensaje = ControladorCliente.Agregar(cuit, razonSocial, tipoCLiente, direccion, email, int.Parse(telefono));
         MessageBox.Show(mensaje);
         this.Close();
 
@@ -49,6 +53,49 @@ namespace TP1_Laboratorio_II
       {
         listBoxTipoCliente.Items.Add(tipos);
       }
+    }
+
+    private void btnActualizar_Click(object sender, EventArgs e)
+    {
+      try
+      {
+        string id = txtBxID.Text;
+        Cliente clienteNuevo = ControladorCliente.BuscarPorId(int.Parse(id));
+        clienteNuevo.Cuit = int.Parse(txtbxCuit.Text);
+        clienteNuevo.RazonSocial = txtBxRazonSocial.Text;
+        clienteNuevo.Email = txtBxEmail.Text;
+        clienteNuevo.Direccion = txtBxDireccion.Text;
+        clienteNuevo.Telefono = int.Parse(txtBxTelefono.Text);
+        string mensaje = ControladorCliente.Actualizar(clienteNuevo);
+        MessageBox.Show(mensaje);
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show("Error");
+      }
+    }
+
+    private void btnBuscarPorID_Click(object sender, EventArgs e)
+    {
+      try
+      {
+        string id = txtBxID.Text;
+        Cliente clienteNuevo = ControladorCliente.BuscarPorId(int.Parse(id));
+        if (clienteNuevo is not null)
+        {
+          MessageBox.Show("Cliente encontrado");
+        }
+        txtbxCuit.Text = clienteNuevo.Cuit.ToString();
+        txtBxRazonSocial.Text = clienteNuevo.RazonSocial;
+        txtBxEmail.Text = clienteNuevo.Email;
+        txtBxDireccion.Text = clienteNuevo.Direccion;
+        txtBxTelefono.Text = clienteNuevo.Telefono.ToString();
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show("Error. Cliente no encontrado");
+      }
+
     }
   }
 }

@@ -39,7 +39,7 @@ namespace TP1_Laboratorio_II
       
       Producto productoNuevo; 
       int Id = 1001;
-      productoNuevo = ControladorProducto.BuscarProductoPorID(ParserCSV.ConvertirIntAString(Id));
+      productoNuevo = ControladorProducto.BuscarProductoPorID(Archivo.ConvertirIntAString(Id));
       while (productoNuevo != null)
       {
         if (productoNuevo.TipoProducto == "Fabricacion")
@@ -54,7 +54,7 @@ namespace TP1_Laboratorio_II
         }
         Id++;
         
-        productoNuevo = ControladorProducto.BuscarProductoPorID(ParserCSV.ConvertirIntAString(Id));
+        productoNuevo = ControladorProducto.BuscarProductoPorID(Archivo.ConvertirIntAString(Id));
       }
     
     }

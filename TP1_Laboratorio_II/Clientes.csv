@@ -1,0 +1,5 @@
+TipoCliente,Presupuestos,Id,RazonSocial,Cuit,Email,Telefono,Direccion
+Responsable_Inscripto,System.Collections.Generic.List`1[System.Int32],1,La fabrica del taco,25785785,lafabricadeltaco@gmail.com,1123587896,Gorriti 4586, CABA
+Responsable_Inscripto,System.Collections.Generic.List`1[System.Int32],2,Aguila Calva,205995354,aguilac@hotmail.com,1150429878,Carlos Calvo 43, Avellaneda
+Consumidor_Final,System.Collections.Generic.List`1[System.Int32],3,El Palacio del Blumer,235458563,elpalaciodelblumer@gmail.com,112354856,Peru 159, CABA
+Responsable_Inscripto,System.Collections.Generic.List`1[System.Int32],4,Sony Argentina,25658945,sony@sony.com,115879531,Rivadavia 1230

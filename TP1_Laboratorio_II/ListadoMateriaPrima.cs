@@ -33,7 +33,7 @@ namespace TP1_Laboratorio_II
 
       dataGridView1.DataSource = dt;
       int Id = 1;
-      MateriaPrima materiaNueva = ControladorMaterial.BuscarMaterialPorID(ParserCSV.ConvertirIntAString(Id));
+      MateriaPrima materiaNueva = ControladorMaterial.BuscarMaterialPorID(Archivo.ConvertirIntAString(Id));
       while (materiaNueva != null)
       {
         DataRow row = dt.NewRow();
@@ -45,7 +45,7 @@ namespace TP1_Laboratorio_II
         row["Unidad de medida"] = materiaNueva.UnidadMedida;
         dt.Rows.Add(row);
         Id++;
-        materiaNueva = ControladorMaterial.BuscarMaterialPorID(ParserCSV.ConvertirIntAString(Id));
+        materiaNueva = ControladorMaterial.BuscarMaterialPorID(Archivo.ConvertirIntAString(Id));
       }
         
       }

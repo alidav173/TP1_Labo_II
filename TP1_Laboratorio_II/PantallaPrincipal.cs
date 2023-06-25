@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP1_Laboratorio_II.Controlador;
 
 namespace TP1_Laboratorio_II
 {
@@ -116,6 +117,33 @@ namespace TP1_Laboratorio_II
     {
       ClienteVista cv = new ClienteVista();
       cv.Show();
+    }
+
+    private void mostrarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      ListadoClientes lc = new ListadoClientes();
+      lc.Show();
+    }
+
+    private void exportarACSVToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show(ControladorCliente.ExportarAcsv("C:\\Users\\alida\\source\\repos\\TP1_Laboratorio_II\\Clientes.csv"));
+
+    }
+
+    private void exportarAJSONToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show(ControladorCliente.ExportarAJson("C:\\Users\\alida\\source\\repos\\TP1_Laboratorio_II\\Clientes.json"));
+    }
+
+    private void presupuestosToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void exportarAPDFToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show(ControladorCliente.ExportarApdf("C:\\Users\\alida\\source\\repos\\TP1_Laboratorio_II\\Clientes.pdf"));
     }
   }
 }

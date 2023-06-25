@@ -14,10 +14,22 @@
           "FirebaseDatabase.net": "4.2.0",
           "Google.Cloud.Firestore": "3.3.0",
           "Modelos": "1.0.0",
-          "System.Data.SqlClient": "4.8.5"
+          "System.Data.SqlClient": "4.8.5",
+          "ceTe.DynamicPDF.CoreSuite.NET": "12.4.0"
         },
         "runtime": {
           "TP1_Laboratorio_II.dll": {}
+        }
+      },
+      "ceTe.DynamicPDF.CoreSuite.NET/12.4.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "4.7.0"
+        },
+        "runtime": {
+          "lib/net5.0/DynamicPDF.CoreSuite.dll": {
+            "assemblyVersion": "12.4.0.48839",
+            "fileVersion": "12.4.0.48839"
+          }
         }
       },
       "FirebaseAuthentication.net/4.0.2": {
@@ -452,6 +464,12 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
+      "System.Security.Cryptography.Cng/4.7.0": {},
+      "System.Security.Cryptography.Pkcs/4.7.0": {
+        "dependencies": {
+          "System.Security.Cryptography.Cng": "4.7.0"
+        }
+      },
       "System.Security.Principal.Windows/4.7.0": {},
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
@@ -472,7 +490,8 @@
           "FireSharp.Serialization.JsonNet": "1.1.0",
           "FirebaseAuthentication.net": "4.0.2",
           "FirebaseDatabase.net": "4.2.0",
-          "System.Data.SqlClient": "4.8.5"
+          "System.Data.SqlClient": "4.8.5",
+          "ceTe.DynamicPDF.CoreSuite.NET": "12.4.0"
         },
         "runtime": {
           "Data.dll": {}
@@ -484,7 +503,8 @@
           "FireSharp.Serialization.JsonNet": "1.1.0",
           "FirebaseAuthentication.net": "4.0.2",
           "FirebaseDatabase.net": "4.2.0",
-          "System.Data.SqlClient": "4.8.5"
+          "System.Data.SqlClient": "4.8.5",
+          "ceTe.DynamicPDF.CoreSuite.NET": "12.4.0"
         },
         "runtime": {
           "Modelos.dll": {}
@@ -497,6 +517,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ceTe.DynamicPDF.CoreSuite.NET/12.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fFWusYzILMFMjwMOQ/kfbeKF5ufLFtoTpDSPFFEDRWzWkstQqZdS5Hs8HWV0AGvlyGR9r+o7S0/4tTM8Me1dmA==",
+      "path": "cete.dynamicpdf.coresuite.net/12.4.0",
+      "hashPath": "cete.dynamicpdf.coresuite.net.12.4.0.nupkg.sha512"
     },
     "FirebaseAuthentication.net/4.0.2": {
       "type": "package",
@@ -812,6 +839,20 @@
       "sha512": "sha512-JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
       "path": "system.security.accesscontrol/4.7.0",
       "hashPath": "system.security.accesscontrol.4.7.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Cng/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4WQjFuypWtxb/bl/YwEE7LYGn4fgpsikFfBU6xwEm4YBYiRAhXAEJ62lILBu2JJSFbClIAntFTGfDZafn8yZTg==",
+      "path": "system.security.cryptography.cng/4.7.0",
+      "hashPath": "system.security.cryptography.cng.4.7.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Pkcs/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0Srzh6YlhjuMxaqMyeCCdZs22cucaUAG6SKDd3gNHBJmre0VZ71ekzWu9rvLD4YXPetyNdPvV6Qst+8C++9v3Q==",
+      "path": "system.security.cryptography.pkcs/4.7.0",
+      "hashPath": "system.security.cryptography.pkcs.4.7.0.nupkg.sha512"
     },
     "System.Security.Principal.Windows/4.7.0": {
       "type": "package",

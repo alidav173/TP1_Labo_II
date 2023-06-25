@@ -1,0 +1,32 @@
+[
+  {
+    "TipoCliente": "Responsable_Inscripto",
+    "Presupuestos": [],
+    "Id": 1,
+    "RazonSocial": "La fabrica del taco",
+    "Cuit": 25785785,
+    "Email": "",
+    "Telefono": 0,
+    "Direccion": ""
+  },
+  {
+    "TipoCliente": "Responsable_Inscripto",
+    "Presupuestos": [],
+    "Id": 2,
+    "RazonSocial": "Aguila Calva",
+    "Cuit": 205995354,
+    "Email": "",
+    "Telefono": 0,
+    "Direccion": ""
+  },
+  {
+    "TipoCliente": "Responsable_Inscripto",
+    "Presupuestos": [],
+    "Id": 3,
+    "RazonSocial": "Kingdom Hearts",
+    "Cuit": 235685255,
+    "Email": "",
+    "Telefono": 0,
+    "Direccion": ""
+  }
+]

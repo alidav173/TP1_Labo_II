@@ -27,7 +27,7 @@ namespace Controlador
           {
             var client = ConexionDatos.ConectarBD();
 
-            string mensaje = ControladorCliente.buscarClientePorCuit(cuitInt);
+            string mensaje = ControladorCliente.BuscarClientePorCuit(cuitInt);
             if (mensaje == "No se encontro el cliente")
             {
              Cliente clienteNuevo = new Cliente(cuitInt, razonSocial, tipoCliente);

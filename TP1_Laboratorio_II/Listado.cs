@@ -38,11 +38,11 @@ namespace TP1_Laboratorio_II
       dt.Columns.Add("tipo Usuario");
 
       dataGridView1.DataSource = dt;
-      ControladorBase controladorUno = new ControladorBase();
+      //ControladorBase controladorUno = new ControladorBase();
 
-      List<Usuario> lista = controladorUno.Traer();
+     // List<Usuario> lista = controladorUno.Traer();
 
-      foreach(Usuario usuarioNuevo in lista)
+      /*foreach(Usuario usuarioNuevo in lista)
       {
         DataRow row = dt.NewRow();
         row["Id"] = usuarioNuevo.Id;
@@ -54,7 +54,7 @@ namespace TP1_Laboratorio_II
         row["tipo Usuario"] = usuarioNuevo.TipoUsuario;
         dt.Rows.Add(row);
 
-      }
+      }*/
     }
   }
 }

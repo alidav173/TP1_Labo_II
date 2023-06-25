@@ -27,7 +27,7 @@ namespace TP1_Laboratorio_II
       this.Close();
     }
 
-    private async void btnAgregar_Click(object sender, EventArgs e)
+    private void btnAgregar_Click(object sender, EventArgs e)
     {
       int filasSeleccionadas = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
       if (filasSeleccionadas > 0)
@@ -75,11 +75,12 @@ namespace TP1_Laboratorio_II
       dt.Columns.Add("Descripción");
       dt.Columns.Add("Costo");
       dt.Columns.Add("Precio");
+      dt.Columns.Add("Tipo Producto");
 
       dataGridView1.DataSource = dt;
       Producto productoNuevo;
       int Id = 1001;
-      productoNuevo = ControladorProducto.BuscarProductoPorID(ParserCSV.ConvertirIntAString(Id));
+      productoNuevo =  ControladorProducto.BuscarProductoPorID(Archivo.ConvertirIntAString(Id));
       while (productoNuevo != null)
       {
           DataRow row = dt.NewRow();
@@ -88,9 +89,10 @@ namespace TP1_Laboratorio_II
           row["Descripción"] = productoNuevo.DescripcionProducto;
           row["Costo"] = productoNuevo.CostoProducto;
           row["Precio"] = productoNuevo.PrecioProducto;
-          dt.Rows.Add(row);
+          row["Tipo Producto"] = productoNuevo.TipoProducto;
+        dt.Rows.Add(row);
           Id++;
-        productoNuevo = ControladorProducto.BuscarProductoPorID(ParserCSV.ConvertirIntAString(Id));
+        productoNuevo = ControladorProducto.BuscarProductoPorID(Archivo.ConvertirIntAString(Id));
       }
     }
 
