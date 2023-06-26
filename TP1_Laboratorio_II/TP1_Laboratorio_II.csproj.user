@@ -13,6 +13,9 @@
     <Compile Update="Contacto.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EditarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Listado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -47,6 +50,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="RegistroVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UsuarioVista.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -69,3 +69,5 @@ C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Labo
 C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.ListadoProductos.resources
 C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.ListadoClientes.resources
 C:\Users\alida\source\repos\TP1_Laboratorio_II\bin\Debug\net6.0-windows\DynamicPDF.CoreSuite.dll
+C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.UsuarioVista.resources
+C:\Users\alida\source\repos\TP1_Laboratorio_II\obj\Debug\net6.0-windows\TP1_Laboratorio_II.EditarMaterial.resources

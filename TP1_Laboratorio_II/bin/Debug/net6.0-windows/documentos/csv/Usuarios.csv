@@ -1,0 +1,7 @@
+Id,Nombre,Apellido,Email,Contraseña,Dni,TipoUsuario
+1,Adriana,Aranguren,adriana@yahoo.com,987654,96521365,Entregas
+2,Ruben,Diaz,eldiaz@gmail.com,123456,18111581,Admin
+3,Eduardo,Garcia,alidav@gmail.com,123456,12365256,Admin
+4,Karina,D'Abate,karinadabate@gmail.com,123456,19109288,Fabrica
+5,Walter,Sanchez,elflaco@gmail.com,123456,12855263,Fabrica
+6,Martin,Manzarelli,manzaapra@hotmail.com,123456,99520145,Inventario

@@ -144,17 +144,51 @@ namespace TP1_Laboratorio_II
 
     private void exportarACSVToolStripMenuItem2_Click(object sender, EventArgs e)
     {
-      MessageBox.Show(ControladorPresupuesto.ExportarAcsv(".\\Presupuestos.csv"));
+      MessageBox.Show(ControladorPresupuesto.ExportarAcsv(".\\documentos\\csv\\Presupuestos.csv"));
     }
 
     private void exportarAJSONToolStripMenuItem2_Click(object sender, EventArgs e)
     {
-      MessageBox.Show(ControladorPresupuesto.ExportarAJson(".\\Presupuestos.json"));
+      MessageBox.Show(ControladorPresupuesto.ExportarAJson(".\\documentos\\json\\Presupuestos.json"));
     }
 
     private void exportarAPDFToolStripMenuItem2_Click(object sender, EventArgs e)
     {
-      MessageBox.Show(ControladorPresupuesto.ExportarApdf(".\\Presupuestos.pdf"));
+      MessageBox.Show(ControladorPresupuesto.ExportarApdf(".\\documentos\\pdf\\Presupuestos.pdf"));
+    }
+
+ 
+    private void exportarACSVToolStripMenuItem1_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show(ControladorUsuario.ExportarAcsv(".\\documentos\\csv\\Usuarios.csv"));
+    }
+
+    private void exportarAJSONToolStripMenuItem1_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show( ControladorUsuario.ExportarAJson(".\\documentos\\json\\Usuarios.json"));
+    }
+
+    private void exportarAPDFToolStripMenuItem1_Click(object sender, EventArgs e)
+    {
+      MessageBox.Show(ControladorUsuario.ExportarApdf(".\\documentos\\pdf\\Usuarios.pdf"));
+    }
+
+    private void editarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      UsuarioVista uv = new UsuarioVista();
+      uv.Show();
+;    }
+
+    private void editarMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      EditarMaterial em = new EditarMaterial();
+      em.Show();
+    }
+
+    private void editarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      ClienteVista cv = new ClienteVista();
+      cv.Show();
     }
   }
 }

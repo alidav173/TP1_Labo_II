@@ -16,6 +16,7 @@ namespace TP1_Laboratorio_II.Controlador
   public class ControladorCliente
   {
 
+
     public static string validarDatos(string cuit, string razonSocial, string tipoCliente)
     {
       string mensaje = string.Empty;

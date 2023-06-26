@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "Nombre": "Adriana",
+    "Apellido": "Aranguren",
+    "Email": "adriana@yahoo.com",
+    "Contrase\u00F1a": "987654",
+    "Dni": 96521365,
+    "TipoUsuario": "Entregas"
+  },
+  {
+    "Id": 2,
+    "Nombre": "Ruben",
+    "Apellido": "Diaz",
+    "Email": "eldiaz@gmail.com",
+    "Contrase\u00F1a": "123456",
+    "Dni": 18111581,
+    "TipoUsuario": "Admin"
+  },
+  {
+    "Id": 3,
+    "Nombre": "Eduardo",
+    "Apellido": "Garcia",
+    "Email": "alidav@gmail.com",
+    "Contrase\u00F1a": "123456",
+    "Dni": 12365256,
+    "TipoUsuario": "Admin"
+  },
+  {
+    "Id": 4,
+    "Nombre": "Karina",
+    "Apellido": "D\u0027Abate",
+    "Email": "karinadabate@gmail.com",
+    "Contrase\u00F1a": "123456",
+    "Dni": 19109288,
+    "TipoUsuario": "Fabrica"
+  },
+  {
+    "Id": 5,
+    "Nombre": "Walter",
+    "Apellido": "Sanchez",
+    "Email": "elflaco@gmail.com",
+    "Contrase\u00F1a": "123456",
+    "Dni": 12855263,
+    "TipoUsuario": "Fabrica"
+  },
+  {
+    "Id": 6,
+    "Nombre": "Martin",
+    "Apellido": "Manzarelli",
+    "Email": "manzaapra@hotmail.com",
+    "Contrase\u00F1a": "123456",
+    "Dni": 99520145,
+    "TipoUsuario": "Inventario"
+  }
+]

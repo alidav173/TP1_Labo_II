@@ -44,34 +44,6 @@ namespace TP1_Laboratorio_II
     private async void button1_Click(object sender, EventArgs e)
     {
       crearMaterial();
-    /*  try
-      {
-        string nombreMaterial = textBox2.Text;
-        string descripcion = textBox3.Text;
-        string tipo = listBox1.SelectedItem.ToString();
-        string precio = textBox4.Text;
-        string unidadMedida = textBox5.Text;
-        string mensajeControlador = ControladorMaterial.ConectarDBMaterial(nombreMaterial, descripcion, tipo, precio, unidadMedida);
-
-          if(mensajeControlador.Contains("Se creó el material con ID"))
-          {
-            /*var nuevoMaterial = new MateriaPrima(nombreMaterial, descripcion, tipo, precioMaterial, unidadMedida);
-            SetResponse response = await client.SetTaskAsync("Materiales/" + nuevoMaterial.Id, nuevoMaterial);
-            //MateriaPrima result = response.ResultAs<MateriaPrima>();
-            MessageBox.Show(mensajeControlador);
-            this.Close();
-        }
-          else
-          {
-            MessageBox.Show(mensajeControlador);
-          }
-             
-      }
-      catch (NullReferenceException ex)
-      {
-        MessageBox.Show("Seleccione el tipo de material");
-      }
-*/
     }
 
 

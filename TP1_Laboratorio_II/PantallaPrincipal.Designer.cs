@@ -54,7 +54,6 @@ namespace TP1_Laboratorio_II
             this.mostrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -146,7 +145,7 @@ namespace TP1_Laboratorio_II
             this.editarPresupuestoToolStripMenuItem,
             this.mostrarPresupuestosToolStripMenuItem});
             this.presupuestoToolStripMenuItem.Name = "presupuestoToolStripMenuItem";
-            this.presupuestoToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.presupuestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.presupuestoToolStripMenuItem.Text = "Presupuesto";
             // 
             // nuevoPresupuestoToolStripMenuItem
@@ -175,7 +174,7 @@ namespace TP1_Laboratorio_II
             this.editarProductoToolStripMenuItem,
             this.mostrarProductosToolStripMenuItem});
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productoToolStripMenuItem.Text = "Producto";
             // 
             // nuevoProductoToolStripMenuItem
@@ -221,26 +220,27 @@ namespace TP1_Laboratorio_II
             this.editarMaterialToolStripMenuItem,
             this.mostrarMaterialesToolStripMenuItem});
             this.materialesToolStripMenuItem.Name = "materialesToolStripMenuItem";
-            this.materialesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.materialesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.materialesToolStripMenuItem.Text = "Materiales";
             // 
             // nuevoMaterialToolStripMenuItem
             // 
             this.nuevoMaterialToolStripMenuItem.Name = "nuevoMaterialToolStripMenuItem";
-            this.nuevoMaterialToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.nuevoMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoMaterialToolStripMenuItem.Text = "Nuevo Material";
             this.nuevoMaterialToolStripMenuItem.Click += new System.EventHandler(this.nuevoMaterialToolStripMenuItem_Click);
             // 
             // editarMaterialToolStripMenuItem
             // 
             this.editarMaterialToolStripMenuItem.Name = "editarMaterialToolStripMenuItem";
-            this.editarMaterialToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.editarMaterialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editarMaterialToolStripMenuItem.Text = "Editar Material";
+            this.editarMaterialToolStripMenuItem.Click += new System.EventHandler(this.editarMaterialToolStripMenuItem_Click);
             // 
             // mostrarMaterialesToolStripMenuItem
             // 
             this.mostrarMaterialesToolStripMenuItem.Name = "mostrarMaterialesToolStripMenuItem";
-            this.mostrarMaterialesToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.mostrarMaterialesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mostrarMaterialesToolStripMenuItem.Text = "Mostrar Materiales";
             // 
             // clienteToolStripMenuItem
@@ -250,26 +250,27 @@ namespace TP1_Laboratorio_II
             this.editarClienteToolStripMenuItem,
             this.mostrarClientesToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             // 
             // nuevoClienteToolStripMenuItem
             // 
             this.nuevoClienteToolStripMenuItem.Name = "nuevoClienteToolStripMenuItem";
-            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.nuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoClienteToolStripMenuItem.Text = "Nuevo Cliente";
             this.nuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoClienteToolStripMenuItem_Click);
             // 
             // editarClienteToolStripMenuItem
             // 
             this.editarClienteToolStripMenuItem.Name = "editarClienteToolStripMenuItem";
-            this.editarClienteToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.editarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editarClienteToolStripMenuItem.Text = "Editar Cliente";
+            this.editarClienteToolStripMenuItem.Click += new System.EventHandler(this.editarClienteToolStripMenuItem_Click);
             // 
             // mostrarClientesToolStripMenuItem
             // 
             this.mostrarClientesToolStripMenuItem.Name = "mostrarClientesToolStripMenuItem";
-            this.mostrarClientesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.mostrarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mostrarClientesToolStripMenuItem.Text = "Mostrar Clientes";
             this.mostrarClientesToolStripMenuItem.Click += new System.EventHandler(this.mostrarClientesToolStripMenuItem_Click);
             // 
@@ -277,10 +278,9 @@ namespace TP1_Laboratorio_II
             // 
             this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editarUsuarioToolStripMenuItem,
-            this.eliminarUsuarioToolStripMenuItem,
             this.mostrarUsuariosToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
             // editarUsuarioToolStripMenuItem
@@ -288,12 +288,7 @@ namespace TP1_Laboratorio_II
             this.editarUsuarioToolStripMenuItem.Name = "editarUsuarioToolStripMenuItem";
             this.editarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.editarUsuarioToolStripMenuItem.Text = "Editar Usuario";
-            // 
-            // eliminarUsuarioToolStripMenuItem
-            // 
-            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
+            this.editarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.editarUsuarioToolStripMenuItem_Click);
             // 
             // mostrarUsuariosToolStripMenuItem
             // 
@@ -320,7 +315,7 @@ namespace TP1_Laboratorio_II
             this.exportarAJSONToolStripMenuItem,
             this.exportarAPDFToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // exportarACSVToolStripMenuItem
@@ -351,28 +346,28 @@ namespace TP1_Laboratorio_II
             this.exportarAJSONToolStripMenuItem2,
             this.exportarAPDFToolStripMenuItem2});
             this.presupuestosToolStripMenuItem.Name = "presupuestosToolStripMenuItem";
-            this.presupuestosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.presupuestosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.presupuestosToolStripMenuItem.Text = "Presupuestos";
             this.presupuestosToolStripMenuItem.Click += new System.EventHandler(this.presupuestosToolStripMenuItem_Click);
             // 
             // exportarACSVToolStripMenuItem2
             // 
             this.exportarACSVToolStripMenuItem2.Name = "exportarACSVToolStripMenuItem2";
-            this.exportarACSVToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.exportarACSVToolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
             this.exportarACSVToolStripMenuItem2.Text = "Exportar a CSV";
             this.exportarACSVToolStripMenuItem2.Click += new System.EventHandler(this.exportarACSVToolStripMenuItem2_Click);
             // 
             // exportarAJSONToolStripMenuItem2
             // 
             this.exportarAJSONToolStripMenuItem2.Name = "exportarAJSONToolStripMenuItem2";
-            this.exportarAJSONToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.exportarAJSONToolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
             this.exportarAJSONToolStripMenuItem2.Text = "Exportar a JSON";
             this.exportarAJSONToolStripMenuItem2.Click += new System.EventHandler(this.exportarAJSONToolStripMenuItem2_Click);
             // 
             // exportarAPDFToolStripMenuItem2
             // 
             this.exportarAPDFToolStripMenuItem2.Name = "exportarAPDFToolStripMenuItem2";
-            this.exportarAPDFToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.exportarAPDFToolStripMenuItem2.Size = new System.Drawing.Size(158, 22);
             this.exportarAPDFToolStripMenuItem2.Text = "Exportar a PDF";
             this.exportarAPDFToolStripMenuItem2.Click += new System.EventHandler(this.exportarAPDFToolStripMenuItem2_Click);
             // 
@@ -383,7 +378,7 @@ namespace TP1_Laboratorio_II
             this.exportarAJSONToolStripMenuItem3,
             this.exportarAPDFToolStripMenuItem3});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // exportarACSVToolStripMenuItem3
@@ -411,7 +406,7 @@ namespace TP1_Laboratorio_II
             this.exportarAJSONToolStripMenuItem4,
             this.exportarAPDFToolStripMenuItem4});
             this.materialesToolStripMenuItem1.Name = "materialesToolStripMenuItem1";
-            this.materialesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.materialesToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.materialesToolStripMenuItem1.Text = "Materiales";
             // 
             // exportarACSVToolStripMenuItem4
@@ -439,7 +434,7 @@ namespace TP1_Laboratorio_II
             this.exportarAJSONToolStripMenuItem1,
             this.exportarAPDFToolStripMenuItem1});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
             // exportarACSVToolStripMenuItem1
@@ -447,18 +442,21 @@ namespace TP1_Laboratorio_II
             this.exportarACSVToolStripMenuItem1.Name = "exportarACSVToolStripMenuItem1";
             this.exportarACSVToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.exportarACSVToolStripMenuItem1.Text = "Exportar a CSV";
+            this.exportarACSVToolStripMenuItem1.Click += new System.EventHandler(this.exportarACSVToolStripMenuItem1_Click);
             // 
             // exportarAJSONToolStripMenuItem1
             // 
             this.exportarAJSONToolStripMenuItem1.Name = "exportarAJSONToolStripMenuItem1";
             this.exportarAJSONToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.exportarAJSONToolStripMenuItem1.Text = "Exportar a JSON";
+            this.exportarAJSONToolStripMenuItem1.Click += new System.EventHandler(this.exportarAJSONToolStripMenuItem1_Click);
             // 
             // exportarAPDFToolStripMenuItem1
             // 
             this.exportarAPDFToolStripMenuItem1.Name = "exportarAPDFToolStripMenuItem1";
             this.exportarAPDFToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.exportarAPDFToolStripMenuItem1.Text = "Exportar a PDF";
+            this.exportarAPDFToolStripMenuItem1.Click += new System.EventHandler(this.exportarAPDFToolStripMenuItem1_Click);
             // 
             // aboutItToolStripMenuItem
             // 
@@ -472,14 +470,14 @@ namespace TP1_Laboratorio_II
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(177, 22);
             this.toolStripMenuItem7.Text = "Acerca del software";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(177, 22);
             this.toolStripMenuItem8.Text = "Contacto";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
@@ -565,7 +563,6 @@ namespace TP1_Laboratorio_II
     private ToolStripMenuItem exportarAPDFToolStripMenuItem1;
     private ToolStripMenuItem usuarioToolStripMenuItem;
     private ToolStripMenuItem editarUsuarioToolStripMenuItem;
-    private ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
     private ToolStripMenuItem mostrarUsuariosToolStripMenuItem;
   }
 }
